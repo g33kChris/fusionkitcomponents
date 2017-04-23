@@ -1,0 +1,18 @@
+// load the default config generator.
+var genDefaultConfig = require('@kadira/storybook/dist/server/config/defaults/webpack.config.js'); 
+module.exports = {
+    module: {
+        loaders: [
+            {
+                test: /\.css$/,
+                loader: "style!css?modules&importLoaders=1&localIdentName=[name]__[local]---[hash:base64:5]!postcss"
+            }
+        ]
+    },
+    postcss: function (webpack) {
+        return [
+            require("postcss-import")({ addDependencyTo: webpack }),
+            require("postcss-cssnext")()
+        ]
+    }
+}
