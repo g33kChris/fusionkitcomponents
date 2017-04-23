@@ -1,0 +1,31 @@
+{
+  "name": "@g33kchris/fusionkit-js-components",
+  "version": "1.0.0",
+  "description": "FusionKit React component library.",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "@kadira/storybook": "^2.21.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://teletraan4.visualstudio.com/DefaultCollection/fusion/_git/fusionkit-js-components"
+  },
+  "keywords": [
+    "FusionKit",
+    "React",
+    "js",
+    "Components",
+    "css"
+  ],
+  "author": "Chris Wallace (chris@g33kchris.net)",
+  "license": "ISC"
+}
