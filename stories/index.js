@@ -4,6 +4,7 @@ import Button from './Button';
 import Welcome from './Welcome';
 
 import { LinkButton } from '../src/components';
+// import { LinkButton } from '../dist';
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
