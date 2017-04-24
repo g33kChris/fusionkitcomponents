@@ -3,7 +3,7 @@ import { storiesOf, action, linkTo } from '@kadira/storybook';
 import Button from './Button';
 import Welcome from './Welcome';
 
-import { LinkButton } from '../components';
+import { LinkButton } from '../src/components';
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
