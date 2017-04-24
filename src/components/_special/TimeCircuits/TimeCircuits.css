@@ -1,0 +1,423 @@
+@import "@g33kchris/fusionkit-css-colours";
+
+/*@font-face {
+  font-family: 'digital-7_monoitalic';
+  src: url("assets/fonts/digital-7_mono_italic-webfont.eot");
+  src: url("assets/fonts/digital-7_mono_italic-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/digital-7_mono_italic-webfont.woff2") format("woff2"), url("../assets/fonts/digital-7_mono_italic-webfont.woff") format("woff"), url("assets/fonts/digital-7_mono_italic-webfont.ttf") format("truetype"), url("assets/fonts/digital-7_mono_italic-webfont.svg#digital-7_monoitalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+  @font-face {
+  font-family: 'microgramma_d_otMdEx';
+  src: url("assets/fonts/microgramma-d-ot-medium-extended_30404-webfont.eot");
+  src: url("assets/fonts/microgramma-d-ot-medium-extended_30404-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/microgramma-d-ot-medium-extended_30404-webfont.woff") format("woff"), url("assets/fonts/microgramma-d-ot-medium-extended_30404-webfont.ttf") format("truetype"), url("assets/fonts/microgramma-d-ot-medium-extended_30404-webfont.svg#microgramma_d_otMdEx") format("svg");
+  font-weight: normal;
+  font-style: normal; }*/
+
+:root {
+    --labelRed: #8e1a0a;
+    --circuitBlack: #000;
+    --digitalFont: 'digital-7_monoitalic';
+    --labelFont: 'microgramma_d_otMdEx';
+}
+
+@-webkit-keyframes blink-destination-lights {
+  0% {
+    background-color: #3E2917;
+    box-shadow: inset -1px 2px 3px #ababab; }
+  50% {
+    background-color: #EFF288;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #EFF288 0 2px 12px; }
+  100% {
+    background-color: #3E2917;
+    box-shadow: inset -1px 2px 3px #ababab; } }
+
+@keyframes blink-destination-lights {
+  0% {
+    background-color: #3E2917;
+    box-shadow: inset -1px 2px 3px #ababab; }
+  50% {
+    background-color: #EFF288;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #EFF288 0 2px 12px; }
+  100% {
+    background-color: #3E2917;
+    box-shadow: inset -1px 2px 3px #ababab; } }
+
+/* Start of Shared Classes */
+
+.label{
+    font-family: var(--labelFont);
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+}
+
+.dateLabel {
+    composes: label;
+    display: inline-block;
+    background-color: var(--labelRed);
+    color: var(--fskt_white);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: .8rem;
+    margin-bottom: 0.5rem;
+    @media screen and (max-width: 460px) {
+        display: none;
+    }
+}
+
+.lcd {
+    background-color: var(--circuitBlack);
+    font-family: var(--digitalFont);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    @media screen and (min-width: 461px) {
+        font-size: 3rem;
+    }
+
+    @media screen and (max-width: 460px) {
+        font-size: 2rem;
+    }
+}
+
+.consoleMonth {
+    text-align: center;
+}
+
+.consoleDisplay {
+    display: inline-block;
+    font-family: var(--digitalFont);
+}
+
+.fadedEights {
+    position: absolute;
+    opacity: .15;
+}
+
+.labelAmPm{
+    position: absolute;
+    background-color: var(--labelRed);
+    color: var(--fskt_white);
+    font-size: 0.5rem;
+    padding: 0.2rem;
+}
+
+.indicatorLight{
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-right: 0.3rem;
+}
+
+.lightOn{
+    background-color: #EFF288;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #EFF288 0 2px 12px;
+}
+
+.lightOff{
+    background-color: #3E2917;
+    box-shadow: inset -1px 2px 3px #ababab;
+}
+
+.amLight{
+    position: absolute;
+     bottom: 11px;
+    left: 10px;
+}
+
+.pmLight{
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+}
+
+.colonLight {
+    -webkit-animation: blink-destination-lights 1s step-start infinite;
+    animation: blink-destination-lights 1s step-start infinite;
+}
+
+/* End of Shared Classes */
+
+.row {
+    background-color: green;
+    margin-bottom: 2rem;
+}
+
+.monthLabel {
+    composes: dateLabel;
+    margin-left: -1.2rem;
+}
+
+.dayLabel {
+    composes: dateLabel;
+    margin-left: 0.5rem;
+}
+
+.yearLabel {
+    composes: dateLabel;
+    margin-left: 1.2rem;
+}
+
+.hourLabel {
+    composes: dateLabel;
+    margin-left: 6.2rem;
+}
+
+.minLabel {
+    composes: dateLabel;
+    margin-left: 1.1rem;
+}
+
+.monthFadedEights {
+    composes: fadedEights;
+    text-align: center;
+}
+
+.destinationDay {
+    composes: lcd;
+    composes: consoleDisplay;
+}
+
+.destinationMonth {
+    composes: lcd;
+    composes: consoleMonth;
+    composes: consoleDisplay;
+}
+
+.destinationYear {
+    composes: lcd;
+    composes: consoleDisplay;
+}
+
+.destinationHour {
+    composes: lcd;
+    composes: consoleDisplay;
+}
+
+.destinationMin {
+    composes: lcd;
+    composes: consoleDisplay;
+}
+
+.dayFadedEights, .hourFadedEights, .minFadedEights {
+    composes: fadedEights;
+}
+
+.yearFadedEights {
+    composes: fadedEights;
+}
+
+.consoleAmPm {
+    composes: consoleDisplay;
+    position: relative;
+    width: 3.5rem;
+    @media screen and (max-width: 460px) {
+        display: none;
+    }
+}
+
+.amLabel {
+    composes: label;
+    composes: labelAmPm;
+    bottom: 2.4rem;
+    left: 0.2rem;
+    @media screen and (max-width: 460px) {
+        display: none;
+    }
+}
+
+.pmLabel{
+    composes: label;
+    composes: labelAmPm;
+    bottom: -0.6rem;
+    left: 2rem;
+    @media screen and (max-width: 460px) {
+        display: none;
+    }
+}
+
+.amLightOn{
+    composes: indicatorLight;
+    composes: lightOn;
+    composes: amLight;
+}
+
+.amLightOff{
+    composes: indicatorLight;
+    composes: lightOff;
+    composes: amLight;
+}
+
+.pmLightOn{
+    composes: indicatorLight;
+    composes: lightOn;
+    composes: pmLight;
+}
+
+.pmLightOff{
+    composes: indicatorLight;
+    composes: lightOff;
+    composes: pmLight;
+}
+
+.consoleColonLights {
+    composes: consoleDisplay;
+    position: relative;
+    width: 14px;
+}
+
+.indicatorLightTop {
+    composes: colonLight;
+    composes: indicatorLight;
+    composes: lightOn;
+
+    position: absolute;
+    bottom: 12px;
+}
+
+.indicatorLightBottom {
+    composes: colonLight;
+    composes: indicatorLight;
+    composes: lightOn;
+
+    position: absolute;
+    bottom: -4px;
+}
+
+.footerLabel {
+    composes: label;
+    letter-spacing: 3px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1rem;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*@import '../../_styles/utilities/variables.css';
+@import '../../_styles/utilities/mixins.css'; 
+
+
+*/
+
+/*@import '../../_styles/utilities/variables.css';
+
+:root {
+    --baseTimeCircuitComponent: './TimeCircuits.css';
+}
+
+.row {
+    composes: row from var(--baseTimeCircuitComponent);
+}
+
+.monthFadedEights {
+    composes: monthFadedEights from var(--baseTimeCircuitComponent);
+}
+
+.dayFadedEights {
+    composes: dayFadedEights from var(--baseTimeCircuitComponent);
+}
+
+.yearFadedEights {
+    composes: yearFadedEights from var(--baseTimeCircuitComponent);
+}
+
+.hourFadedEights {
+    composes: hourFadedEights from var(--baseTimeCircuitComponent);
+}
+
+.minFadedEights {
+    composes: minFadedEights from var(--baseTimeCircuitComponent);
+}
+
+.consoleAmPm {
+    composes: consoleAmPm from var(--baseTimeCircuitComponent);
+}
+
+.consoleColonLights {
+    composes: consoleColonLights from var(--baseTimeCircuitComponent);
+}
+
+.indicatorLightTop {
+    composes: indicatorLightTop from var(--baseTimeCircuitComponent);
+}
+
+.indicatorLightBottom {
+    composes: indicatorLightBottom from var(--baseTimeCircuitComponent);
+}
+
+.amLabel {
+    composes: amLabel from var(--baseTimeCircuitComponent);
+}
+
+.monthLabel {
+    composes: monthLabel from var(--baseTimeCircuitComponent);
+}
+
+.dayLabel {
+    composes: dayLabel from var(--baseTimeCircuitComponent);
+}
+
+.yearLabel {
+    composes: yearLabel from var(--baseTimeCircuitComponent);
+}
+
+.hourLabel {
+    composes: hourLabel from var(--baseTimeCircuitComponent);
+}
+
+.minLabel {
+    composes: minLabel from var(--baseTimeCircuitComponent);
+}
+
+.footerLabel {
+    composes: footerLabel from var(--baseTimeCircuitComponent);
+}
+
+.amLightOn {
+    composes: amLightOn from var(--baseTimeCircuitComponent);
+}
+
+.pmLabel {
+    composes: pmLabel from var(--baseTimeCircuitComponent);
+}
+
+.pmLightOff {
+    composes: pmLightOff from var(--baseTimeCircuitComponent);
+}
+
+.destination {
+    color: var(--timeCircuitRed);
+}
+
+.destinationMonth {
+    composes: destinationMonth from var(--baseTimeCircuitComponent);
+    composes: destination;
+}
+
+.destinationDay {
+    composes: destinationDay from var(--baseTimeCircuitComponent);
+    composes: destination;
+}
+
+.destinationYear {
+    composes: destinationYear from var(--baseTimeCircuitComponent);
+    composes: destination;
+}
+
+.destinationHour {
+    composes: destinationHour from var(--baseTimeCircuitComponent);
+    composes: destination;
+}
+
+.destinationMin {
+    composes: destinationMin from var(--baseTimeCircuitComponent);
+    composes: destination;
+}*/
