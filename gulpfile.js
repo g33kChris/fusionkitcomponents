@@ -20,4 +20,10 @@ gulp.task('css', () => {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', [ 'react', 'css' ]);
+gulp.task('fonts', () => {
+    console.log('gulping up the font files!...standbye');
+    return gulp.src('src/components/**/**/*.{ttf,eot,woff2,woff,svg}')
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', [ 'react', 'css', 'fonts' ]);

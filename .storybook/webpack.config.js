@@ -6,6 +6,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: "style!css?modules&importLoaders=1&localIdentName=[name]__[local]---[hash:base64:5]!postcss"
+            },
+            { 
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file?name=fonts/[name].[ext]'
             }
         ]
     },

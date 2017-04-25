@@ -1,24 +1,33 @@
 @import "@g33kchris/fusionkit-css-colours";
 
-/*@font-face {
+@font-face {
+    font-family: 'open sans';
+    src: url("./assets/OpenSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal; }
+
+@font-face {
   font-family: 'digital-7_monoitalic';
-  src: url("assets/fonts/digital-7_mono_italic-webfont.eot");
-  src: url("assets/fonts/digital-7_mono_italic-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/digital-7_mono_italic-webfont.woff2") format("woff2"), url("../assets/fonts/digital-7_mono_italic-webfont.woff") format("woff"), url("assets/fonts/digital-7_mono_italic-webfont.ttf") format("truetype"), url("assets/fonts/digital-7_mono_italic-webfont.svg#digital-7_monoitalic") format("svg");
+  src: url("./assets/digital-7_mono_italic-webfont.eot");
+  src: url("./assets/digital-7_mono_italic-webfont.eot?#iefix") format("embedded-opentype"), url("./assets/digital-7_mono_italic-webfont.woff2") format("woff2"), url("./assets/digital-7_mono_italic-webfont.woff") format("woff"), url("./assets/digital-7_mono_italic-webfont.ttf") format("truetype"), url("./assets/digital-7_mono_italic-webfont.svg#digital-7_monoitalic") format("svg");
   font-weight: normal;
   font-style: normal; }
 
-  @font-face {
+@font-face {
   font-family: 'microgramma_d_otMdEx';
-  src: url("assets/fonts/microgramma-d-ot-medium-extended_30404-webfont.eot");
-  src: url("assets/fonts/microgramma-d-ot-medium-extended_30404-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/microgramma-d-ot-medium-extended_30404-webfont.woff") format("woff"), url("assets/fonts/microgramma-d-ot-medium-extended_30404-webfont.ttf") format("truetype"), url("assets/fonts/microgramma-d-ot-medium-extended_30404-webfont.svg#microgramma_d_otMdEx") format("svg");
+  src: url("./assets/microgramma-d-ot-medium-extended_30404-webfont.eot");
+  src: url("./assets/microgramma-d-ot-medium-extended_30404-webfont.eot?#iefix") format("embedded-opentype"), url("./assets/microgramma-d-ot-medium-extended_30404-webfont.woff") format("woff"), url("./assets/microgramma-d-ot-medium-extended_30404-webfont.ttf") format("truetype"), url("./assets/microgramma-d-ot-medium-extended_30404-webfont.svg#microgramma_d_otMdEx") format("svg");
   font-weight: normal;
-  font-style: normal; }*/
+  font-style: normal; }
 
 :root {
     --labelRed: #8e1a0a;
     --circuitBlack: #000;
     --digitalFont: 'digital-7_monoitalic';
     --labelFont: 'microgramma_d_otMdEx';
+    --digitRed: #FF6410;
+    --digitYellow: #F4CE26;
+    --digitGreen: #67FC42;
 }
 
 @-webkit-keyframes blink-destination-lights {
@@ -49,11 +58,11 @@
     font-family: var(--labelFont);
     font-weight: 600;
     letter-spacing: 0.2rem;
+    display: block;
 }
 
 .dateLabel {
     composes: label;
-    display: inline-block;
     background-color: var(--labelRed);
     color: var(--fskt_white);
     padding-left: 0.5rem;
@@ -88,7 +97,6 @@
 }
 
 .consoleDisplay {
-    display: inline-block;
     font-family: var(--digitalFont);
 }
 
@@ -98,7 +106,6 @@
 }
 
 .labelAmPm{
-    position: absolute;
     background-color: var(--labelRed);
     color: var(--fskt_white);
     font-size: 0.5rem;
@@ -123,15 +130,13 @@
 }
 
 .amLight{
-    position: absolute;
-     bottom: 11px;
-    left: 10px;
+    margin: 0.5rem 0;
+    display: inline-block;
 }
 
 .pmLight{
-    position: absolute;
-    bottom: -20px;
-    left: 10px;
+    margin: 0.5rem 0;
+    display: inline-block;
 }
 
 .colonLight {
@@ -142,33 +147,27 @@
 /* End of Shared Classes */
 
 .row {
-    background-color: green;
     margin-bottom: 2rem;
 }
 
 .monthLabel {
     composes: dateLabel;
-    margin-left: -1.2rem;
 }
 
 .dayLabel {
     composes: dateLabel;
-    margin-left: 0.5rem;
 }
 
 .yearLabel {
     composes: dateLabel;
-    margin-left: 1.2rem;
 }
 
 .hourLabel {
     composes: dateLabel;
-    margin-left: 6.2rem;
 }
 
 .minLabel {
     composes: dateLabel;
-    margin-left: 1.1rem;
 }
 
 .monthFadedEights {
@@ -176,28 +175,28 @@
     text-align: center;
 }
 
-.destinationDay {
+.dayDigit {
     composes: lcd;
     composes: consoleDisplay;
 }
 
-.destinationMonth {
+.monthDigit {
     composes: lcd;
     composes: consoleMonth;
     composes: consoleDisplay;
 }
 
-.destinationYear {
+.yearDigit {
     composes: lcd;
     composes: consoleDisplay;
 }
 
-.destinationHour {
+.hourDigit {
     composes: lcd;
     composes: consoleDisplay;
 }
 
-.destinationMin {
+.minDigit {
     composes: lcd;
     composes: consoleDisplay;
 }
@@ -213,7 +212,7 @@
 .consoleAmPm {
     composes: consoleDisplay;
     position: relative;
-    width: 3.5rem;
+    top: 1rem;
     @media screen and (max-width: 460px) {
         display: none;
     }
@@ -222,8 +221,6 @@
 .amLabel {
     composes: label;
     composes: labelAmPm;
-    bottom: 2.4rem;
-    left: 0.2rem;
     @media screen and (max-width: 460px) {
         display: none;
     }
@@ -273,18 +270,12 @@
     composes: colonLight;
     composes: indicatorLight;
     composes: lightOn;
-
-    position: absolute;
-    bottom: 12px;
 }
 
 .indicatorLightBottom {
     composes: colonLight;
     composes: indicatorLight;
     composes: lightOn;
-
-    position: absolute;
-    bottom: -4px;
 }
 
 .footerLabel {
@@ -301,123 +292,94 @@
     text-align: center;
 }
 
-/*@import '../../_styles/utilities/variables.css';
-@import '../../_styles/utilities/mixins.css'; 
-
-
-*/
-
-/*@import '../../_styles/utilities/variables.css';
-
-:root {
-    --baseTimeCircuitComponent: './TimeCircuits.css';
-}
-
-.row {
-    composes: row from var(--baseTimeCircuitComponent);
-}
-
-.monthFadedEights {
-    composes: monthFadedEights from var(--baseTimeCircuitComponent);
-}
-
-.dayFadedEights {
-    composes: dayFadedEights from var(--baseTimeCircuitComponent);
-}
-
-.yearFadedEights {
-    composes: yearFadedEights from var(--baseTimeCircuitComponent);
-}
-
-.hourFadedEights {
-    composes: hourFadedEights from var(--baseTimeCircuitComponent);
-}
-
-.minFadedEights {
-    composes: minFadedEights from var(--baseTimeCircuitComponent);
-}
-
-.consoleAmPm {
-    composes: consoleAmPm from var(--baseTimeCircuitComponent);
-}
-
-.consoleColonLights {
-    composes: consoleColonLights from var(--baseTimeCircuitComponent);
-}
-
-.indicatorLightTop {
-    composes: indicatorLightTop from var(--baseTimeCircuitComponent);
-}
-
-.indicatorLightBottom {
-    composes: indicatorLightBottom from var(--baseTimeCircuitComponent);
-}
-
-.amLabel {
-    composes: amLabel from var(--baseTimeCircuitComponent);
-}
-
-.monthLabel {
-    composes: monthLabel from var(--baseTimeCircuitComponent);
-}
-
-.dayLabel {
-    composes: dayLabel from var(--baseTimeCircuitComponent);
-}
-
-.yearLabel {
-    composes: yearLabel from var(--baseTimeCircuitComponent);
-}
-
-.hourLabel {
-    composes: hourLabel from var(--baseTimeCircuitComponent);
-}
-
-.minLabel {
-    composes: minLabel from var(--baseTimeCircuitComponent);
-}
-
-.footerLabel {
-    composes: footerLabel from var(--baseTimeCircuitComponent);
-}
-
-.amLightOn {
-    composes: amLightOn from var(--baseTimeCircuitComponent);
-}
-
-.pmLabel {
-    composes: pmLabel from var(--baseTimeCircuitComponent);
-}
-
-.pmLightOff {
-    composes: pmLightOff from var(--baseTimeCircuitComponent);
-}
-
-.destination {
-    color: var(--timeCircuitRed);
-}
-
 .destinationMonth {
-    composes: destinationMonth from var(--baseTimeCircuitComponent);
-    composes: destination;
+    composes: monthDigit;
+    color: var(--digitRed);
 }
 
 .destinationDay {
-    composes: destinationDay from var(--baseTimeCircuitComponent);
-    composes: destination;
+    composes: dayDigit;
+    color: var(--digitRed);
 }
 
 .destinationYear {
-    composes: destinationYear from var(--baseTimeCircuitComponent);
-    composes: destination;
+    composes: yearDigit;
+    color: var(--digitRed);
 }
 
 .destinationHour {
-    composes: destinationHour from var(--baseTimeCircuitComponent);
-    composes: destination;
+    composes: hourDigit;
+    color: var(--digitRed);
 }
 
 .destinationMin {
-    composes: destinationMin from var(--baseTimeCircuitComponent);
-    composes: destination;
-}*/
+    composes: minDigit;
+    color: var(--digitRed);
+}
+
+.presentMonth {
+    composes: monthDigit;
+    color: var(--digitYellow);
+}
+
+.presentDay {
+    composes: dayDigit;
+    color: var(--digitYellow);
+}
+
+.presentYear {
+    composes: yearDigit;
+    color: var(--digitYellow);
+}
+
+.presentHour {
+    composes: hourDigit;
+    color: var(--digitYellow);
+}
+
+.presentMin {
+    composes: minDigit;
+    color: var(--digitYellow);
+}
+
+.pastMonth {
+    composes: monthDigit;
+    color: var(--digitGreen);
+}
+
+.pastDay {
+    composes: dayDigit;
+    color: var(--digitGreen);
+}
+
+.pastYear {
+    composes: yearDigit;
+    color: var(--digitGreen);
+}
+
+.pastHour {
+    composes: hourDigit;
+    color: var(--digitGreen);
+}
+
+.pastMin {
+    composes: minDigit;
+    color: var(--digitGreen);
+}
+
+.digits {
+    text-align: center;
+}
+
+.labels {
+    text-align: center;
+}
+
+.month, .day, .year, .hour, .min, .amPm, .colon {
+    display: inline-block;
+    margin: 0 0.3rem;
+}
+
+.amPm {
+    width: 3.5rem;
+}
