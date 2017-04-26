@@ -1,6 +1,6 @@
 {
   "name": "@g33kchris/fusionkit-js-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "FusionKit React component library.",
   "main": "dist/index.js",
   "dependencies": {
