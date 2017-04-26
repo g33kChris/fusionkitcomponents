@@ -1,5 +1,6 @@
 @import "@g33kchris/fusionkit-css-baseline";
 @import "@g33kchris/fusionkit-css-colours";
+@import "@g33kchris/fusionkit-css-typography";
 
 .root {
     /* Structure */
@@ -17,5 +18,5 @@
     font-size: 1.3rem;
     background-color: var(--fskt_blue);
     color: var(--fskt_white);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fskt_lato);
 }
