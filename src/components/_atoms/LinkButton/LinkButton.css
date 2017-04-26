@@ -20,3 +20,7 @@
     color: var(--fskt_white);
     font-family: var(--fskt_lato);
 }
+
+.cleartest {
+    composes: clearfix from '@g33kchris/fusionkit-css-utilities';
+}
