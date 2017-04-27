@@ -1,11 +1,12 @@
 {
   "name": "@g33kchris/fusionkit-js-components",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "FusionKit React component library.",
   "main": "dist/index.js",
   "dependencies": {
     "@g33kchris/fusionkit-css-baseline": "0.0.1",
     "@g33kchris/fusionkit-css-colours": "0.0.1",
+    "@g33kchris/fusionkit-css-layout": "0.0.1",
     "@g33kchris/fusionkit-css-typography": "0.0.3",
     "@g33kchris/fusionkit-css-utilities": "0.0.2",
     "react": "^15.5.4",

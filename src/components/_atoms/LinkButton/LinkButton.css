@@ -1,6 +1,7 @@
 @import "@g33kchris/fusionkit-css-baseline";
 @import "@g33kchris/fusionkit-css-colours";
 @import "@g33kchris/fusionkit-css-typography";
+@import "@g33kchris/fusionkit-css-layout";
 
 .root {
     /* Structure */
@@ -19,8 +20,14 @@
     background-color: var(--fskt_blue);
     color: var(--fskt_white);
     font-family: var(--fskt_lato);
+
+    @apply --grid_xl_12;
 }
 
 .cleartest {
     composes: clearfix from '@g33kchris/fusionkit-css-utilities';
+}
+
+.grid{
+    
 }
