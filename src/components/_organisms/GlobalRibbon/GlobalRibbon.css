@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-    lost-center: 1280px;
+    composes: gridWrapper from '@g33kchris/fusionkit-css-layout';
 }
 
 
