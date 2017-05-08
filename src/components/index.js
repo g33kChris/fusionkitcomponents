@@ -1,4 +1,5 @@
 export { default as LinkButton } from './_atoms/LinkButton/LinkButton';
+export { default as LogoImage } from './_atoms/LogoImage/LogoImage';
 
 export { default as GlobalRibbon } from './_organisms/GlobalRibbon/GlobalRibbon';
 

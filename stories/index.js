@@ -3,9 +3,12 @@ import { storiesOf, action, linkTo } from '@kadira/storybook';
 import Button from './Button';
 import Welcome from './Welcome';
 
+import logoImage from '../assets/g33k3rylogo2016_global.svg';
+
 import {
   GlobalRibbon,
   LinkButton, 
+  LogoImage,
   TimeCircuits,
   Themes } from '../src/components';
 
@@ -31,6 +34,18 @@ storiesOf('GlobalRibbon', module)
       rightContent="This is a the global ribbon using the outrun skyblue theme."
       theme={Themes.GlobalRibbon.OutRunSkyBlue}
     />
+  ))
+  .add('example content (CandyCane)', () => (
+    <GlobalRibbon
+      leftContent={<LogoImage imageSrc={logoImage} />}
+      rightContent="This is where the right content lives."
+      theme={Themes.GlobalRibbon.OutRunCandycane} />
+  ))
+  .add('example content (SkyBlue)', () => (
+    <GlobalRibbon
+      leftContent={<LogoImage imageSrc={logoImage} />}
+      rightContent="This is where the right content lives."
+      theme={Themes.GlobalRibbon.OutRunSkyBlue} />
   ));
 
 storiesOf('Button', module)
@@ -41,27 +56,32 @@ storiesOf('Button', module)
     <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
   ));
 
-  storiesOf('LinkButton', module)
-    .add('with text', () => (
-      <LinkButton href="#">Example Link Button</LinkButton>
-    ));
+storiesOf('LinkButton', module)
+  .add('with text', () => (
+    <LinkButton href="#">Example Link Button</LinkButton>
+  ));
 
-    const TimeCircuitProps = {
-      whereYoureGoing: {
-        date: new Date(),
-        label: "Destination Time"
-      },
-      whereYouAre: {
-        date: new Date(),
-        label: "Present Time"
-      },
-      whereYouWere: {
-        date: new Date(),
-        label: "Time Departed"
-      }
-    }
+storiesOf('LogoImage', module)
+  .add('with example svg', () => (
+    <LogoImage imageSrc={logoImage} />
+  ));
 
-  storiesOf('TimeCircuits', module)
-    .add('default', () => (
-      <TimeCircuits {...TimeCircuitProps} />
-    ));
+const TimeCircuitProps = {
+  whereYoureGoing: {
+    date: new Date(),
+    label: "Destination Time"
+  },
+  whereYouAre: {
+    date: new Date(),
+    label: "Present Time"
+  },
+  whereYouWere: {
+    date: new Date(),
+    label: "Time Departed"
+  }
+};
+
+storiesOf('TimeCircuits', module)
+  .add('default', () => (
+    <TimeCircuits {...TimeCircuitProps} />
+  ));
