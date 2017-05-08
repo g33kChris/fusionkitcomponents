@@ -3,11 +3,11 @@ import { storiesOf, action, linkTo } from '@kadira/storybook';
 import Button from './Button';
 import Welcome from './Welcome';
 
-import { 
+import {
   GlobalRibbon,
   LinkButton, 
-  TimeCircuits } from '../src/components';
-// import { LinkButton } from '../dist';
+  TimeCircuits,
+  Themes } from '../src/components';
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
@@ -16,7 +16,21 @@ storiesOf('Welcome', module)
 
 storiesOf('GlobalRibbon', module)
   .add('default', () => (
-    <GlobalRibbon />
+    <GlobalRibbon leftContent="This is where the left content lives." rightContent="This is where the right content lives." />
+  ))
+  .add('OutRun_Candycane theme', () => (
+    <GlobalRibbon 
+      leftContent="This is a the global ribbon using the outrun Candycane theme" 
+      rightContent="This is a the global ribbon using the outrun Candycane theme."
+      theme={Themes.GlobalRibbon.OutRunCandycane}
+    />
+  ))
+  .add('OutRun_SkyBlue theme', () => (
+    <GlobalRibbon 
+      leftContent="This is a the global ribbon using the outrun skyblue theme" 
+      rightContent="This is a the global ribbon using the outrun skyblue theme."
+      theme={Themes.GlobalRibbon.OutRunSkyBlue}
+    />
   ));
 
 storiesOf('Button', module)

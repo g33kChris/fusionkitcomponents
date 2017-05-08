@@ -1,10 +1,6 @@
 @import "@g33kchris/fusionkit-css-layout";
 @import "@g33kchris/fusionkit-css-responsive";
 
-.root {
-    /*composes: root from '../../_molecules/HeaderRibbon/themes/LightBgSecondaryBorder.css';*/
-}
-
 .wrapper {
     composes: gridWrapper from '@g33kchris/fusionkit-css-layout';
 }
@@ -38,62 +34,3 @@
         display:none;
     }
 }
-
-/*@import '../../_styles/variables/layout.css';
-
-
-
-.wrapper {
-    lost-center: var(--maxWidth);
-}
-
-.left {
-    
-}
-
-.right {
-    
-}
-
-
-.list {
-    display: inline-flex;
-
-    @media (--mqPhblt) {
-        width: 100%;
-    }
-
-    @media(--mqSmtPn) {
-        width: 100%;
-        flex-wrap: wrap;
-    }
-}
-
-.item {
-    composes: item from '../../_molecules/List/themes/InlineBlockList.css';
-    @media (--mqPhblt) {
-        flex: 1;
-    }
-
-    @media(--mqSmtPn) {
-        flex-basis: 33.3%;
-    }
-}
-
-
-.button {
-    composes: root from '../../_atoms/LinkButton/themes/NeonSecondary.css';
-    font-size: 1.5rem;
-
-    @media (--mqPhblt) {
-        height: 100%;
-        text-align: center;
-        line-height: 1.5rem;
-    }
-
-    @media(--mqSmtPn) {
-        height: 100%;
-        text-align: center;
-        line-height: 1.5rem;
-    }
-}*/

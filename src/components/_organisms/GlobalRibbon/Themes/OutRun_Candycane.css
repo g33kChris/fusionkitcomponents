@@ -1,0 +1,7 @@
+@import "@g33kchris/fusionkit-css-colours";
+
+.root {
+    background-color: var(--fskt_white);
+    border-bottom: 0.2rem solid var(--outrun_pink);
+    color: var(--fskt_charcoal);
+}
