@@ -1,0 +1,109 @@
+.root {
+    /*composes: root from '../../_molecules/HeaderRibbon/themes/LightBgSecondaryBorder.css';*/
+}
+
+.wrapper {
+    lost-center: 1280px;
+}
+
+
+/*@import '../../_styles/variables/layout.css';
+
+
+
+.wrapper {
+    lost-center: var(--maxWidth);
+}
+
+.left {
+    @media (--mqXl) {
+        lost-masonry-column: 2/12;
+        text-align: left;
+    }
+
+    @media (--mqDsktp) {
+        lost-masonry-column: 2/12;
+        text-align: left;
+    }
+
+    @media (--mqTblt) {
+        lost-masonry-column: 1/8;
+        text-align: left;
+    }
+
+    @media (--mqPhblt) {
+        lost-column: 6/6;
+        text-align: center;
+    }
+
+    @media(--mqSmtPn) {
+        lost-column: 4/4;
+        text-align: center;
+    }
+}
+
+.right {
+    @media (--mqXl) {
+        lost-masonry-column: 10/12;
+    }
+
+    @media (--mqDsktp) {
+        lost-masonry-column: 10/12;
+    }
+
+    @media (--mqTblt) {
+        lost-masonry-column: 7/8;
+    }
+
+    @media (--mqPhblt) {
+        display:none;
+    }
+
+    @media(--mqSmtPn) {
+        display:none;
+    }
+    text-align: right;
+}
+
+
+.list {
+    display: inline-flex;
+
+    @media (--mqPhblt) {
+        width: 100%;
+    }
+
+    @media(--mqSmtPn) {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+.item {
+    composes: item from '../../_molecules/List/themes/InlineBlockList.css';
+    @media (--mqPhblt) {
+        flex: 1;
+    }
+
+    @media(--mqSmtPn) {
+        flex-basis: 33.3%;
+    }
+}
+
+
+.button {
+    composes: root from '../../_atoms/LinkButton/themes/NeonSecondary.css';
+    font-size: 1.5rem;
+
+    @media (--mqPhblt) {
+        height: 100%;
+        text-align: center;
+        line-height: 1.5rem;
+    }
+
+    @media(--mqSmtPn) {
+        height: 100%;
+        text-align: center;
+        line-height: 1.5rem;
+    }
+}*/

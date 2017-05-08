@@ -3,12 +3,20 @@ import { storiesOf, action, linkTo } from '@kadira/storybook';
 import Button from './Button';
 import Welcome from './Welcome';
 
-import { LinkButton, TimeCircuits } from '../src/components';
+import { 
+  GlobalRibbon,
+  LinkButton, 
+  TimeCircuits } from '../src/components';
 // import { LinkButton } from '../dist';
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
     <Welcome showApp={linkTo('Button')}/>
+  ));
+
+storiesOf('GlobalRibbon', module)
+  .add('default', () => (
+    <GlobalRibbon />
   ));
 
 storiesOf('Button', module)
