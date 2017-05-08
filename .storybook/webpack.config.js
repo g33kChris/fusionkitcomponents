@@ -16,7 +16,8 @@ module.exports = {
     postcss: function (webpack) {
         return [
             require("postcss-import")({ addDependencyTo: webpack }),
-            require("postcss-cssnext")()
+            require("postcss-cssnext")(),
+            require("lost")
         ]
     }
 }
