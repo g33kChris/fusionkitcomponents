@@ -1,21 +1,19 @@
 import React from 'react';
-import styleMixer from '@g33kchris/fusionkit-js-stylemixer';
-import baseStyles from './GlobalRibbon.css';
-import themes from './Themes';
+import { HeaderRibbon } from '../../_molecules';
 
+const LeftContent = () => (
+    <p>This is where left content will be</p>
+);
 
-const GlobalRibbon = ({ leftContent, rightContent, theme }) => {
-    const styles = styleMixer(baseStyles, theme);
-    return (<div className={styles.root}>
-                <div className={styles.wrapper}>
-                    <div className={styles.left}>
-                        { leftContent }
-                    </div>
-                    <div className={styles.right}>
-                        { rightContent }
-                    </div>
-                </div>
-            </div>);
-};
+const RightContent = () => (
+    <p>This is where the right content will be</p>
+);
+
+const GlobalRibbon = () => (
+    <HeaderRibbon>
+        <LeftContent key="left" />
+        <RightContent key="right" />
+    </HeaderRibbon>
+);
 
 export default GlobalRibbon;

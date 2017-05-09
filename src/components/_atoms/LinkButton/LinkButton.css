@@ -1,7 +1,6 @@
 @import "@g33kchris/fusionkit-css-baseline";
 @import "@g33kchris/fusionkit-css-colours";
 @import "@g33kchris/fusionkit-css-typography";
-@import "@g33kchris/fusionkit-css-layout";
 
 .root {
     /* Structure */
@@ -16,20 +15,15 @@
     /* Base Costmetic */
     text-decoration: none;
     text-transform: uppercase;   
-    /*font-size: 1.3rem;*/
-    background-color: var(--outrun_blue);
-    color: var(--fskt_white);
+    font-size: 1.3rem;
+    color: var(--fskt_charcoal);
     font-family: var(--fskt_lato);
 
-    @apply --grid_xl_12;
+    &:hover {
+        background-color: var(--fskt_blanderGrey);
+    }
 
-    composes: demoHeader from "@g33kchris/fusionkit-css-foundations";
-}
-
-.cleartest {
-    composes: clearfix from '@g33kchris/fusionkit-css-utilities';
-}
-
-.grid{
-    
+    &:active {
+        background-color: var(--fskt_blandGrey);
+    }
 }

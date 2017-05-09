@@ -1,0 +1,6 @@
+@import "@g33kchris/fusionkit-css-colours";
+
+.root {
+    background-color: var(--outrun_pink);
+    color: var(--fskt_white);
+}

@@ -2,19 +2,197 @@ import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 import Button from './Button';
 import Welcome from './Welcome';
+import css from './global.css';
 
 import logoImage from '../assets/g33k3rylogo2016_global.svg';
 
+import { LinkButton } from '../src/components';
 import {
   GlobalRibbon,
-  LinkButton, 
   LogoImage,
   TimeCircuits,
   Themes } from '../src/components';
 
+console.log('Themes Loaded: ', Themes);
+
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
     <Welcome showApp={linkTo('Button')}/>
+  ));
+
+storiesOf('Atoms', module)
+  .addWithChapters(
+    'LinkButton',
+    {
+      info: 'A link which looks like a button in the browser. A LinkButton is 100% width of its container with uppercase test in the middle (styles can be overidden using themes).',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of the LinkButton',
+          sections: [
+            {
+              title: 'Default',
+              subtitle: 'LinkButton - unstyled.',
+              sectionFn: () => (<LinkButton href="#">Example Link Button</LinkButton>),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            },
+            {
+              title: 'Default',
+              subtitle: 'LinkButton - OutRun Blue theme.',
+              sectionFn: () => (<LinkButton theme={Themes.LinkButton.OutRun_Blue} href="#">Example Link Button</LinkButton>),
+              options: {
+                showSource: true,
+                allowSourceToggling: true
+              }
+            },
+            {
+              title: 'Default',
+              subtitle: 'LinkButton - OutRun Pink theme.',
+              sectionFn: () => (<LinkButton theme={Themes.LinkButton.OutRun_Pink} href="#">Example Link Button</LinkButton>),
+              options: {
+                showSource: true,
+                allowSourceToggling: true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'LogoImage',
+    {
+      subtitle: 'A Header Ribbon Component',
+      info: 'Some other info',
+      chapters: [
+        // List of chapters. Refer to Configuration Format section. 
+        {
+          title: 'Chapter Title',
+          subtitle: 'Chapter Subtitle',
+          info: 'Chapter Info',
+          sections: [
+            {
+              title: 'Section Title',
+              subtitle: 'Section subtitle',
+              info: 'Section info',
+              sectionFn: () => (<LinkButton />),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            }
+          ]
+        }
+      ]
+    }
+  );
+
+
+storiesOf('Molecules', module)
+  .addWithChapters(
+    'HeaderRibbon',
+    {
+      subtitle: 'A Header Ribbon Component',
+      info: 'Some other info',
+      chapters: [
+        // List of chapters. Refer to Configuration Format section. 
+        {
+          title: 'Chapter Title',
+          subtitle: 'Chapter Subtitle',
+          info: 'Chapter Info',
+          sections: [
+            {
+              title: 'Section Title',
+              subtitle: 'Section subtitle',
+              info: 'Section info',
+              sectionFn: () => (<LinkButton />),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'Another HeaderRibbon',
+    {
+      subtitle: 'A Header Ribbon Component',
+      info: 'Some other info',
+      chapters: [
+        // List of chapters. Refer to Configuration Format section. 
+        {
+          title: 'Chapter Title',
+          subtitle: 'Chapter Subtitle',
+          info: 'Chapter Info',
+          sections: [
+            {
+              title: 'Section Title',
+              subtitle: 'Section subtitle',
+              info: 'Section info',
+              sectionFn: () => (<LinkButton />),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            }
+          ]
+        }
+      ]
+    }
+  );
+
+  storiesOf('Organisms', module)
+  .addWithChapters(
+    'GlobalRibbon',
+    {
+      subtitle: 'A Header Ribbon Component',
+      info: 'Some other info',
+      chapters: [
+        // List of chapters. Refer to Configuration Format section. 
+        {
+          title: 'Chapter Title',
+          subtitle: 'Chapter Subtitle',
+          info: 'Chapter Info',
+          sections: [
+            {
+              title: 'Section Title',
+              subtitle: 'Section subtitle',
+              info: 'Section info',
+              sectionFn: () => (<LinkButton />),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            }
+          ]
+        }
+      ]
+    }
+  );
+
+  // .add('all', () => (
+  //   <HeaderRibbon />
+  // ));
+
+/*storiesOf('Organisms', module)
+  .add('all', () => (
+    <HeaderRibbon />
   ));
 
 storiesOf('GlobalRibbon', module)
@@ -64,7 +242,7 @@ storiesOf('LinkButton', module)
 storiesOf('LogoImage', module)
   .add('with example svg', () => (
     <LogoImage imageSrc={logoImage} />
-  ));
+  ));*/
 
 const TimeCircuitProps = {
   whereYoureGoing: {

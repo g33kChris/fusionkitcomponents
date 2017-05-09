@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "dependencies": {
     "@g33kchris/fusionkit-css-baseline": "0.0.2",
-    "@g33kchris/fusionkit-css-colours": "0.0.2",
+    "@g33kchris/fusionkit-css-colours": "0.0.3",
     "@g33kchris/fusionkit-css-foundations": "0.0.2",
     "@g33kchris/fusionkit-css-layout": "0.0.3",
     "@g33kchris/fusionkit-css-responsive": "0.0.1",
@@ -28,6 +28,7 @@
     "lost": "^8.0.0",
     "postcss-cssnext": "^2.10.0",
     "postcss-import": "^9.1.0",
+    "react-storybook-addon-chapters": "^1.1.0",
     "style-loader": "^0.16.1"
   },
   "scripts": {
