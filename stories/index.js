@@ -6,12 +6,16 @@ import css from './global.css';
 
 import logoImage from '../assets/g33k3rylogo2016_global.svg';
 
-import { LinkButton } from '../src/components';
+import { 
+  LinkButton,
+  LivingLinkButton
+ } from '../src/components';
 import {
   GlobalRibbon,
   LogoImage,
   TimeCircuits,
-  Themes } from '../src/components';
+  Themes
+ } from '../src/components';
 
 console.log('Themes Loaded: ', Themes);
 
@@ -42,22 +46,41 @@ storiesOf('Atoms', module)
               }
             },
             {
+              title: 'OutRun Blue',
+              sectionFn: () => (<LinkButton theme={Themes.LinkButton.OutRun_Blue} href="#">Example Link Button</LinkButton>)
+            },
+            {
+              title: 'OutRun Pink',
+              sectionFn: () => (<LinkButton theme={Themes.LinkButton.OutRun_Pink} href="#">Example Link Button</LinkButton>)
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'LivingLinkButton',
+    {
+      info: 'A link which looks like a button in the browser and has an internal animated effect on click (styles can be overidden using themes).',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of the LivingLinkButton',
+          sections: [
+            {
               title: 'Default',
-              subtitle: 'LinkButton - OutRun Blue theme.',
-              sectionFn: () => (<LinkButton theme={Themes.LinkButton.OutRun_Blue} href="#">Example Link Button</LinkButton>),
+              subtitle: 'LivingLinkButton - unstyled.',
+              sectionFn: () => (<LivingLinkButton href="#">Example Link Button</LivingLinkButton>),
               options: {
                 showSource: true,
-                allowSourceToggling: true
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
               }
             },
             {
-              title: 'Default',
-              subtitle: 'LinkButton - OutRun Pink theme.',
-              sectionFn: () => (<LinkButton theme={Themes.LinkButton.OutRun_Pink} href="#">Example Link Button</LinkButton>),
-              options: {
-                showSource: true,
-                allowSourceToggling: true
-              }
+              title: 'Tamerial Blue',
+              sectionFn: () => (<LinkButton theme={Themes.LivingLinkButton.Tamerial_Blue} href="#">Example Link Button</LinkButton>)
             }
           ]
         }
@@ -80,7 +103,7 @@ storiesOf('Atoms', module)
               title: 'Section Title',
               subtitle: 'Section subtitle',
               info: 'Section info',
-              sectionFn: () => (<LinkButton />),
+              sectionFn: () => (<LogoImage />),
               options: {
                 showSource: true,
                 allowSourceToggling: true,
