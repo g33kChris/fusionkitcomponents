@@ -1,6 +1,18 @@
 @import "@g33kchris/fusionkit-css-colours";
 
+:root {
+    --baseColor: var(--outrun_blue)
+};
+
 .root {
-    background-color: var(--outrun_blue);
+    background-color: var(--baseColor);
     color: var(--fskt_white);
+
+    &:hover {
+        background-color: color(var(--baseColor) blackness(20%));
+    }
+
+    &:active {
+        background-color: color(var(--baseColor) blackness(40%));
+    }
 }
