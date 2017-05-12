@@ -4,10 +4,6 @@
     --baseColor: var(--outrun_blue)
 };
 
-.root {
-    background-color: #000;
-}
-
 .item {
     display: inline-block;
 }

@@ -25,6 +25,8 @@ import {
  } from '../src/components';
 
 console.log('Themes Loaded: ', Themes);
+console.log('PropMappers Loaded: ', PropMappers);
+console.log('StyleMappers Loaded: ', StyleMappers);
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
@@ -165,10 +167,6 @@ storiesOf('Molecules', module)
             {
               title: 'OutRun Blue',
               sectionFn: () => (<LinkyList itemDto={LinkyList_ListButton} items={linkData} theme={Themes.LinkyList.OutRun_Blue} />),
-            },
-            {
-              title: 'OutRun Pink',
-              sectionFn: () => (<LinkButton theme={Themes.LinkButton.OutRun_Pink} href="#">Example Link Button</LinkButton>)
             }
           ]
         }

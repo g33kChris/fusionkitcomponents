@@ -6,8 +6,8 @@ import baseStyles from './LinkyList.css';
 const listItems = ({ Template, styleMapper, propMapper }, styles, items) => {
     const itemStyle = styleMapper(styles);
     const mappedItems = items.map(propMapper);
-    return mappedItems.map(i => (
-        <li className={styles.item}>
+    return mappedItems.map((i, index) => (
+        <li key={index} className={styles.item}>
             <Template theme={itemStyle} href={i.href}>
                 { i.text }
             </Template>
