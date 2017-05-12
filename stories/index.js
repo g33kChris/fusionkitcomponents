@@ -1,4 +1,5 @@
 import React from 'react';
+import recompose from 'recompose';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 import Button from './Button';
 import Welcome from './Welcome';
@@ -17,7 +18,10 @@ import {
   GlobalRibbon,
   LogoImage,
   TimeCircuits,
-  Themes
+  Themes,
+  PropMappers,
+  StyleMappers,
+  ChildDto
  } from '../src/components';
 
 console.log('Themes Loaded: ', Themes);
@@ -120,111 +124,51 @@ storiesOf('Atoms', module)
     }
   );
 
+const linkData = [
+  { href:"#", text: 'This is a test link' },
+  { href:"#", text: 'This is a test link' },
+  { href:"#", text: 'This is a test link' },
+  { href:"#", text: 'This is a test link' },
+  { href:"#", text: 'This is a test link' },
+  { href:"#", text: 'This is a test link' },
+  { href:"#", text: 'This is a test link' }
+];
+
+const LinkyList_ListButton = 
+  new ChildDto (
+    LinkButton,
+    StyleMappers.LinkyList.toLinkButton,
+    PropMappers.LinkyList.toLinkButton
+  );
 
 storiesOf('Molecules', module)
   .addWithChapters(
-    'HeaderRibbon',
+    'LinkList',
     {
-      subtitle: 'A Header Ribbon Component',
-      info: 'Some other info',
+      info: 'A list of link data driven components.',
       chapters: [
-        // List of chapters. Refer to Configuration Format section. 
         {
-          title: 'Chapter Title',
-          subtitle: 'Chapter Subtitle',
-          info: 'Chapter Info',
+          title: 'Versions',
+          info: 'Example versions of the LinkButton.',
           sections: [
             {
-              title: 'Section Title',
-              subtitle: 'Section subtitle',
-              info: 'Section info',
-              sectionFn: () => (<LinkButton />),
+              title: 'Default',
+              subtitle: 'LinkyList with LinkButtons - unstyled.',
+              sectionFn: () => (<LinkyList itemDto={LinkyList_ListButton} items={linkData} />),
               options: {
                 showSource: true,
                 allowSourceToggling: true,
                 showPropTables: true,
                 allowPropTablesToggling: true,
               }
-            }
-          ]
-        }
-      ]
-    }
-  )
-  .addWithChapters(
-    'LinkyList',
-    {
-      subtitle: '',
-      info: 'Some other info',
-      chapters: [
-        // List of chapters. Refer to Configuration Format section. 
-        {
-          title: 'Default',
-          subtitle: 'LivingLinkButton - unstyled.',
-          sectionFn: () => (<LinkButton theme={Themes.LinkButton.OutRun_Pink} href="#">Example Link Button</LinkButton>),
-          options: {
-            showSource: true,
-            allowSourceToggling: true,
-            showPropTables: true,
-            allowPropTablesToggling: true,
-          }
-        }
-      ]
-    }
-  )
-  .addWithChapters(
-    'Another HeaderRibbon',
-    {
-      subtitle: 'A Header Ribbon Component',
-      info: 'Some other info',
-      chapters: [
-        // List of chapters. Refer to Configuration Format section. 
-        {
-          title: 'Chapter Title',
-          subtitle: 'Chapter Subtitle',
-          info: 'Chapter Info',
-          sections: [
+            },
             {
-              title: 'Section Title',
-              subtitle: 'Section subtitle',
-              info: 'Section info',
-              sectionFn: () => (<LinkButton />),
-              options: {
-                showSource: true,
-                allowSourceToggling: true,
-                showPropTables: true,
-                allowPropTablesToggling: true,
-              }
-            }
-          ]
-        }
-      ]
-    }
-  );
-
-  storiesOf('Organisms', module)
-  .addWithChapters(
-    'GlobalRibbon',
-    {
-      info: 'Some other info',
-      chapters: [
-        // List of chapters. Refer to Configuration Format section. 
-        {
-          title: 'Chapter Title',
-          subtitle: 'Chapter Subtitle',
-          info: 'Chapter Info',
-          sections: [
+              title: 'OutRun Blue',
+              sectionFn: () => (<LinkButton theme={Themes.LinkButton.OutRun_Blue} href="#">Example Link Button</LinkButton>)
+            },
             {
-              title: 'Section Title',
-              subtitle: 'Section subtitle',
-              info: 'Section info',
-              sectionFn: () => (<LinkButton />),
-              options: {
-                showSource: true,
-                allowSourceToggling: true,
-                showPropTables: true,
-                allowPropTablesToggling: true,
-              }
+              title: 'OutRun Pink',
+              sectionFn: () => (<LinkButton theme={Themes.LinkButton.OutRun_Pink} href="#">Example Link Button</LinkButton>)
             }
           ]
         }

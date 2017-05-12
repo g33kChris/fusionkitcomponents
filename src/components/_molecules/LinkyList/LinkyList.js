@@ -1,19 +1,27 @@
 import React from 'react';
 import "@g33kchris/fusionkit-css-typography/assets.css";
 import styleMixer from "@g33kchris/fusionkit-js-stylemixer";
-import css from './LinkyList.css';
+import baseStyles from './LinkyList.css';
 
-const LinkyList = ({styles, ItemTemplate, items}) => {
-    return(
-        <ul className={styler(css, styles, s => s.root)}>      
-            { items.map(i => (
-                <li className={styler(css, styles, s => s.item)}>
-                    <ItemTemplate href={i.href}>
-                        {i.text}
-                    </ItemTemplate>
-                </li>
-            ))}        
-        </ul>);
-}; 
+const listItems = ({ Template, styleMapper, propMapper }, styles, items) => {
+    const itemStyle = styleMapper(styles);
+    const mappedItems = items.map(propMapper);
+    return mappedItems.map(i => (
+        <li className={styles.item}>
+            <Template theme={itemStyle} href={i.href}>
+                { i.text }
+            </Template>
+        </li>
+    ));
+};
+
+const LinkyList = ({theme, itemDto, items}) => {
+    const styles = styleMixer(baseStyles, theme);
+    return (
+        <ul className={styles.root}>    
+            { listItems(itemDto, styles, items) }
+        </ul>
+    );
+};
 
 export default LinkyList;
