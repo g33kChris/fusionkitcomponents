@@ -10,6 +10,9 @@ import {
   LinkButton,
   LivingLinkButton
  } from '../src/components';
+ import { 
+  LinkyList
+ } from '../src/components';
 import {
   GlobalRibbon,
   LogoImage,
@@ -149,6 +152,27 @@ storiesOf('Molecules', module)
     }
   )
   .addWithChapters(
+    'LinkyList',
+    {
+      subtitle: '',
+      info: 'Some other info',
+      chapters: [
+        // List of chapters. Refer to Configuration Format section. 
+        {
+          title: 'Default',
+          subtitle: 'LivingLinkButton - unstyled.',
+          sectionFn: () => (<LinkButton theme={Themes.LinkButton.OutRun_Pink} href="#">Example Link Button</LinkButton>),
+          options: {
+            showSource: true,
+            allowSourceToggling: true,
+            showPropTables: true,
+            allowPropTablesToggling: true,
+          }
+        }
+      ]
+    }
+  )
+  .addWithChapters(
     'Another HeaderRibbon',
     {
       subtitle: 'A Header Ribbon Component',
@@ -182,7 +206,6 @@ storiesOf('Molecules', module)
   .addWithChapters(
     'GlobalRibbon',
     {
-      subtitle: 'A Header Ribbon Component',
       info: 'Some other info',
       chapters: [
         // List of chapters. Refer to Configuration Format section. 
