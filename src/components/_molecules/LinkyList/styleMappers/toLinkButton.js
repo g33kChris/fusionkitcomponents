@@ -1,5 +1,5 @@
 const toLinkButton = parentStyles => ({
-    root: parentStyles.link
+    root: parentStyles.linkButton
 });
 
 export default toLinkButton;

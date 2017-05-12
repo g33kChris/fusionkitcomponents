@@ -1,9 +1,11 @@
-import GlobalRibbon_Themes from './_organisms/GlobalRibbon/Themes';
-import LinkButton_Themes from './_atoms/LinkButton/Themes';
-import LivingLinkButton_Themes from './_atoms/LivingLinkButton/Themes';
+import GlobalRibbon_Themes from './_organisms/GlobalRibbon/themes';
+import LinkyList_Themes from './_molecules/LinkyList/themes';
+import LinkButton_Themes from './_atoms/LinkButton/themes';
+import LivingLinkButton_Themes from './_atoms/LivingLinkButton/themes';
 
 export default {
     LinkButton: LinkButton_Themes,
     GlobalRibbon: GlobalRibbon_Themes,
-    LivingLinkButton: LivingLinkButton_Themes
+    LivingLinkButton: LivingLinkButton_Themes,
+    LinkyList: LinkyList_Themes
 };

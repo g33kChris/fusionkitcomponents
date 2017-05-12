@@ -164,7 +164,7 @@ storiesOf('Molecules', module)
             },
             {
               title: 'OutRun Blue',
-              sectionFn: () => (<LinkButton theme={Themes.LinkButton.OutRun_Blue} href="#">Example Link Button</LinkButton>)
+              sectionFn: () => (<LinkyList itemDto={LinkyList_ListButton} items={linkData} theme={Themes.LinkyList.OutRun_Blue} />),
             },
             {
               title: 'OutRun Pink',
