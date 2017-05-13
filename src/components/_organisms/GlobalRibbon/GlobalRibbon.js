@@ -1,23 +1,17 @@
 import React from 'react';
-import { Image } from '../../_atoms';
-import { CreeperRibbonLeft } from '../../_molecules';
 import styleMixer from '@g33kchris/fusionkit-js-stylemixer';
+import { Image, LinkButton } from '../../_atoms';
+import { CreeperRibbonLeft, LinkyList } from '../../_molecules';
+import { ChildDto, StyleMappers, PropMappers } from '../../../components';
 import baseStyles from './GlobalRibbon.css';
-import styleMappers from './styleMappers';
 
-const LeftContent = () => (
-    <p>This is where left content will be</p>
-);
-
-const RightContent = () => (
-    <p>This is where the right content will be</p>
-);
-
-const GlobalRibbon = ({ theme, logo }) => {
+const GlobalRibbon = ({ theme, logo, links }) => {
     const styles = styleMixer(baseStyles, theme);
-    return (<CreeperRibbonLeft theme={styleMappers.toCreeperRibbonLeft(styles)}>
-                <Image imageSrc={logo} theme={styleMappers.toImage(styles)} key="left" />
-                <RightContent key="right" />
+    const linkDto = 
+        new ChildDto(LinkButton, StyleMappers.LinkyList.toLinkButton, PropMappers.LinkyList.toLinkButton);
+    return (<CreeperRibbonLeft theme={StyleMappers.GlobalRibbon.toCreeperRibbonLeft(styles)}>
+                <Image imageSrc={logo} theme={StyleMappers.GlobalRibbon.toImage(styles)} key="left" />
+                <LinkyList itemDto={linkDto} items={links} key="right" theme={StyleMappers.GlobalRibbon.toLinkyList(styles)} />
             </CreeperRibbonLeft>);
 };
 

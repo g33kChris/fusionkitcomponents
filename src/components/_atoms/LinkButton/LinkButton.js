@@ -8,9 +8,4 @@ const LinkButton = ({ href, children, theme }) => {
     return(<a className={styles.root} href={href}>{ children }</a>);
 };
 
-LinkButton.propTypes = {
-    href: PropTypes.string,
-    children: PropTypes.element
-};
-
 export default LinkButton;

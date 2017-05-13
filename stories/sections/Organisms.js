@@ -5,6 +5,14 @@ import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/component
 
 import logoImage from '../../assets/g33k3rylogo2016_global.svg';
 
+const demoLinks = [
+  { href: '#', text: 'Games' },
+  { href: '#', text: 'Movies & Tv' },
+  { href: '#', text: 'Tech' },
+  { href: '#', text: 'Comics' },
+  { href: '#', text: 'Release Blog' }
+];
+
 storiesOf('Organisms', module)
   .addWithChapters(
     'GlobalRibbon',
@@ -18,7 +26,7 @@ storiesOf('Organisms', module)
             {
               title: 'Default',
               subtitle: 'GlobalRibbon - unstyled.',
-              sectionFn: () => (<GlobalRibbon logo={logoImage} />),
+              sectionFn: () => (<GlobalRibbon logo={logoImage} links={demoLinks} />),
               options: {
                 showSource: true,
                 allowSourceToggling: true,
