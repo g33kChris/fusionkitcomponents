@@ -8,6 +8,7 @@
     padding: 1rem;
     box-sizing: border-box;
     width: 100%;
+    padding: 4rem;
 
     /* Behaviour */
     text-align: center;
@@ -18,12 +19,5 @@
     font-size: 1.3rem;
     color: var(--fskt_charcoal);
     font-family: var(--fskt_lato);
-
-    &:hover {
-        background-color: var(--fskt_blanderGrey);
-    }
-
-    &:active {
-        background-color: var(--fskt_blandGrey);
-    }
+    background-color: var(--fskt_blandGrey);
 }

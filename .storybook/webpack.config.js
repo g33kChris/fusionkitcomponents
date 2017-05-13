@@ -5,7 +5,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                loader: "style!css?modules&importLoaders=1&localIdentName=[name]__[local]---[hash:base64:5]!postcss"
+                loader: "style!css?modules&importLoaders=1&localIdentName=[path]__[name]__[local]---[hash:base64:5]!postcss"
             },
             { 
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
@@ -16,7 +16,8 @@ module.exports = {
     postcss: function (webpack) {
         return [
             require("postcss-import")({ addDependencyTo: webpack }),
-            require("postcss-cssnext")()
+            require("postcss-cssnext")(),
+            require("lost")
         ]
     }
 }

@@ -4,14 +4,17 @@
   "description": "FusionKit React component library.",
   "main": "dist/index.js",
   "dependencies": {
-    "@g33kchris/fusionkit-css-baseline": "0.0.1",
-    "@g33kchris/fusionkit-css-colours": "0.0.1",
+    "@g33kchris/fusionkit-css-baseline": "0.0.3",
+    "@g33kchris/fusionkit-css-colours": "0.0.3",
     "@g33kchris/fusionkit-css-foundations": "0.0.2",
-    "@g33kchris/fusionkit-css-layout": "0.0.1",
+    "@g33kchris/fusionkit-css-layout": "0.0.3",
+    "@g33kchris/fusionkit-css-responsive": "0.0.1",
     "@g33kchris/fusionkit-css-typography": "0.0.3",
     "@g33kchris/fusionkit-css-utilities": "0.0.2",
+    "@g33kchris/fusionkit-js-stylemixer": "0.0.4",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "recompose": "^0.23.4"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
@@ -23,8 +26,10 @@
     "css-loader": "^0.28.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "lost": "^8.0.0",
     "postcss-cssnext": "^2.10.0",
     "postcss-import": "^9.1.0",
+    "react-storybook-addon-chapters": "^1.1.0",
     "style-loader": "^0.16.1"
   },
   "scripts": {
