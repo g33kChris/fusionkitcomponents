@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
-import { LinkButton, LivingLinkButton, LogoImage } from '../../src/components';
+import { LinkButton, LivingLinkButton, Image } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
 import logoImage from '../../assets/g33k3rylogo2016_global.svg';
@@ -69,22 +69,18 @@ storiesOf('Atoms', module)
     }
   )
   .addWithChapters(
-    'LogoImage',
+    'Image',
     {
-      subtitle: 'A Header Ribbon Component',
-      info: 'Some other info',
+      info: 'A reusable image component.',
       chapters: [
-        // List of chapters. Refer to Configuration Format section. 
         {
-          title: 'Chapter Title',
-          subtitle: 'Chapter Subtitle',
-          info: 'Chapter Info',
+          title: 'Versions',
+          info: 'Example versions of the Image.',
           sections: [
             {
-              title: 'Section Title',
-              subtitle: 'Section subtitle',
-              info: 'Section info',
-              sectionFn: () => (<LogoImage />),
+              title: 'Default',
+              subtitle: 'Image - unstyled.',
+              sectionFn: () => (<Image imageSrc={logoImage} />),
               options: {
                 showSource: true,
                 allowSourceToggling: true,

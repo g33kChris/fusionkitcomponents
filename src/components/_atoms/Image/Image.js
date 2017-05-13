@@ -1,10 +1,10 @@
 import React from 'react';
 import styleMixer from '@g33kchris/fusionkit-js-stylemixer';
-import baseStyles from './LogoImage.css';
+import baseStyles from './Image.css';
 
-const LogoImage = ({imageSrc, theme }) => {
+const Image = ({imageSrc, theme }) => {
     const styles = styleMixer(baseStyles, theme);
     return (<img src={imageSrc} className={styles.root} />);
 };
 
-export default LogoImage;
+export default Image;
