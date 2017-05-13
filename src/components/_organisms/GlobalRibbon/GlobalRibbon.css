@@ -1,14 +1,16 @@
 @import "@g33kchris/fusionkit-css-colours";
+@import "@g33kchris/fusionkit-css-responsive";
 
 .root {
     background-color: var(--fskt_blandGrey);
     color: var(--fskt_charcoal);
 }
 
-.left {
+.logo {
+    height: 3.8rem;
+    padding: 0.8rem;
 
-}
-
-.right {
-
+    @media (--mqTblt_above) {
+        float: left;
+    }
 }

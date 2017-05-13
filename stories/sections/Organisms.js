@@ -3,6 +3,8 @@ import { storiesOf, action, linkTo } from '@kadira/storybook';
 import { GlobalRibbon } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
+import logoImage from '../../assets/g33k3rylogo2016_global.svg';
+
 storiesOf('Organisms', module)
   .addWithChapters(
     'GlobalRibbon',
@@ -16,7 +18,7 @@ storiesOf('Organisms', module)
             {
               title: 'Default',
               subtitle: 'GlobalRibbon - unstyled.',
-              sectionFn: () => (<GlobalRibbon />),
+              sectionFn: () => (<GlobalRibbon logo={logoImage} />),
               options: {
                 showSource: true,
                 allowSourceToggling: true,
