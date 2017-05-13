@@ -6,9 +6,11 @@
 }
 
 .left {
-    @apply --grid_xl_10;
-    @apply --grid_dskTp_10;
-    @apply --grid_tblt_7;
+    @apply --grid_xl_2;
+    @apply --grid_dskTp_2;
+    @apply --grid_tblt_1;
+    @apply --grid_phblt_6;
+    @apply --grid_smtPn_4;
 
     @media (--mqTblt_above) {
         text-align: left;
@@ -20,11 +22,9 @@
 }
 
 .right {
-    @apply --grid_xl_2;
-    @apply --grid_dskTp_2;
-    @apply --grid_tblt_1;
-    @apply --grid_phblt_6;
-    @apply --grid_smtPn_4;
+    @apply --grid_xl_10;
+    @apply --grid_dskTp_10;
+    @apply --grid_tblt_7;
 
     @media (--mqTblt_above) {
         text-align: right;

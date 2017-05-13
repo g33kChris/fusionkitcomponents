@@ -1,7 +1,11 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 import { LinkButton } from '../../src/components';
-import { LinkyList, CreeperRibbonRight } from '../../src/components';
+import { 
+    LinkyList,
+    CreeperRibbonRight,
+    CreeperRibbonLeft
+ } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
 const linkData = [
@@ -80,6 +84,41 @@ const Molecules = storiesOf('Molecules', module)
                                     <p key="left">Content on the Left</p>
                                     <p key="right">Content on the right</p>
                                 </CreeperRibbonRight>),
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'CreeperRibbonLeft',
+    {
+      info: 'A Ribbon component with a small column creeping on the left,',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of CreeperRibbonLeft.',
+          sections: [
+            {
+              title: 'Default',
+              subtitle: 'CreeperRibbonLeft - unstyled.',
+              sectionFn: () => (<CreeperRibbonLeft>
+                                    <p key="left">Content on the Left</p>
+                                    <p key="right">Content on the right</p>
+                                </CreeperRibbonLeft>),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            },
+            {
+              title: 'OutRun Blue',
+              sectionFn: () => (<CreeperRibbonLeft theme={Themes.CreeperRibbonLeft.OutRun_Blue}>
+                                    <p key="left">Content on the Left</p>
+                                    <p key="right">Content on the right</p>
+                                </CreeperRibbonLeft>),
             }
           ]
         }

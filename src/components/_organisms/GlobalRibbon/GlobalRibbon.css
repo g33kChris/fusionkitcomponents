@@ -1,0 +1,14 @@
+@import "@g33kchris/fusionkit-css-colours";
+
+.root {
+    background-color: var(--fskt_blandGrey);
+    color: var(--fskt_charcoal);
+}
+
+.left {
+
+}
+
+.right {
+
+}
