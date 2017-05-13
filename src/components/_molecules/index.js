@@ -1,1 +1,1 @@
-export { default as HeaderRibbon } from './HeaderRibbon/HeaderRibbon';
+export { default as CreeperRibbonRight } from './CreeperRibbonRight/CreeperRibbonRight';

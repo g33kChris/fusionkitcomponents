@@ -1,6 +1,6 @@
 import React from 'react';
 import styleMixer from '@g33kchris/fusionkit-js-stylemixer';
-import baseStyles from './HeaderRibbon.css';
+import baseStyles from './CreeperRibbonRight.css';
 
  const getComponent = (children, key) => {
     return children.filter( (comp) => {
@@ -8,7 +8,7 @@ import baseStyles from './HeaderRibbon.css';
     });
 };
 
-const HeaderRibbon = ({ children, theme }) => {
+const CreeperRibbonRight = ({ children, theme }) => {
     const styles = styleMixer(baseStyles, theme);
     return (<div className={styles.root}>
                 <div className={styles.wrapper}>
@@ -22,4 +22,4 @@ const HeaderRibbon = ({ children, theme }) => {
             </div>);
 };
 
-export default HeaderRibbon;
+export default CreeperRibbonRight;
