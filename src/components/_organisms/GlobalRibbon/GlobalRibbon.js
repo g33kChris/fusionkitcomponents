@@ -2,7 +2,7 @@ import React from 'react';
 import styleMixer from '@g33kchris/fusionkit-js-stylemixer';
 import { Image, LinkButton } from '../../_atoms';
 import { CreeperRibbonLeft, LinkyList } from '../../_molecules';
-import { ChildDto, StyleMappers, PropMappers } from '../../../components';
+import { ChildDto, StyleMappers, PropMappers } from '../../index';
 import baseStyles from './GlobalRibbon.css';
 
 const GlobalRibbon = ({ theme, logo, links }) => {
