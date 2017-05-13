@@ -4,7 +4,7 @@
   "description": "FusionKit React component library.",
   "main": "dist/index.js",
   "dependencies": {
-    "@g33kchris/fusionkit-css-baseline": "0.0.2",
+    "@g33kchris/fusionkit-css-baseline": "0.0.3",
     "@g33kchris/fusionkit-css-colours": "0.0.3",
     "@g33kchris/fusionkit-css-foundations": "0.0.2",
     "@g33kchris/fusionkit-css-layout": "0.0.3",
