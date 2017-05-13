@@ -33,6 +33,10 @@ storiesOf('Organisms', module)
                 showPropTables: true,
                 allowPropTablesToggling: true,
               }
+            },
+            {
+              title: 'OutRun - Candycane',
+              sectionFn: () => (<GlobalRibbon logo={logoImage} links={demoLinks} theme={Themes.GlobalRibbon.OutRunCandycane} />)
             }
           ]
         }
