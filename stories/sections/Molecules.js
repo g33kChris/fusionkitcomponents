@@ -4,7 +4,8 @@ import { LinkButton } from '../../src/components';
 import { 
     LinkyList,
     CreeperRibbonRight,
-    CreeperRibbonLeft
+    CreeperRibbonLeft,
+    ContentBlock
  } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
@@ -119,6 +120,46 @@ const Molecules = storiesOf('Molecules', module)
                                     <p key="left">Content on the Left</p>
                                     <p key="right">Content on the right</p>
                                 </CreeperRibbonLeft>),
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'ContentBlock',
+    {
+      info: 'A block of written content and a call to action.',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of ContentBlock.',
+          sections: [
+            {
+              title: 'Default',
+              subtitle: 'ContentBlock - unstyled.',
+              sectionFn: () => (<ContentBlock
+                                  header="Bacon ipsum dolor amet drumstick leberkas frankfurter" 
+                                  body="Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner."
+                                  cta="Read more"
+                                  href="#"
+                                />),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            },
+            {
+              title: 'OutRun Blue',
+              sectionFn: () => (<ContentBlock
+                                  header="Bacon ipsum dolor amet drumstick leberkas frankfurter" 
+                                  body="Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner."
+                                  cta="Read more"
+                                  href="#"
+                                  theme={Themes.ContentBlock.OutRun_Blue}
+                                />)
             }
           ]
         }

@@ -7,6 +7,7 @@ export { default as SubHeader } from './_atoms/SubHeader/SubHeader';
 export { default as LinkyList } from './_molecules/LinkyList/LinkyList';
 export { default as CreeperRibbonRight } from './_molecules/CreeperRibbonRight/CreeperRibbonRight';
 export { default as CreeperRibbonLeft } from './_molecules/CreeperRibbonLeft/CreeperRibbonLeft';
+export { default as ContentBlock } from './_molecules/ContentBlock/ContentBlock';
 
 export { default as GlobalRibbon } from './_organisms/GlobalRibbon/GlobalRibbon';
 

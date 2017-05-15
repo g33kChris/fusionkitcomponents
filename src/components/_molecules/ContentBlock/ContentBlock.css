@@ -1,0 +1,23 @@
+@import "@g33kchris/fusionkit-css-baseline";
+@import "@g33kchris/fusionkit-css-colours";
+
+.root {
+    padding: 2rem;
+    background-color: var(--fskt_blandGrey);
+}
+
+.titleHolder {
+    margin-bottom: 2rem;
+}
+
+.textHolder {
+    margin-bottom: 2rem;
+}
+
+.title {
+    margin: 0;
+}
+
+.title .text, .button {
+    color: var(--fskt_charcoal);
+}
