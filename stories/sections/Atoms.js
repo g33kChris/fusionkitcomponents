@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
-import { LinkButton, LivingLinkButton, Image, Paragraph } from '../../src/components';
+import { LinkButton, LivingLinkButton, Image, Paragraph, SubHeader } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
 import logoImage from '../../assets/g33k3rylogo2016_global.svg';
@@ -116,6 +116,35 @@ storiesOf('Atoms', module)
             {
               title: 'OutRun Blue',
               sectionFn: () => (<Paragraph theme={Themes.Paragraph.OutRun_Blue}>Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner.</Paragraph>)
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'SubHeader',
+    {
+      info: 'A component to render a subheader.',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of the SubHeader.',
+          sections: [
+            {
+              title: 'Default',
+              subtitle: 'SubHeader - unstyled.',
+              sectionFn: () => (<SubHeader>Bacon ipsum dolor amet drumstick leberkas frankfurter.</SubHeader>),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            },
+            {
+              title: 'OutRun Blue',
+              sectionFn: () => (<SubHeader theme={Themes.SubHeader.OutRun_Blue}>Bacon ipsum dolor amet drumstick leberkas frankfurter.</SubHeader>)
             }
           ]
         }
