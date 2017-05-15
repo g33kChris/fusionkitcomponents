@@ -1,0 +1,9 @@
+@import "@g33kchris/fusionkit-css-colours";
+
+:root {
+    --baseColor: var(--outrun_blue)
+};
+
+.root {
+    color: var(--baseColor);
+}

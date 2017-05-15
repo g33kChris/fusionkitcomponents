@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
-import { LinkButton, LivingLinkButton, Image } from '../../src/components';
+import { LinkButton, LivingLinkButton, Image, Paragraph } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
 import logoImage from '../../assets/g33k3rylogo2016_global.svg';
@@ -87,6 +87,35 @@ storiesOf('Atoms', module)
                 showPropTables: true,
                 allowPropTablesToggling: true,
               }
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'Paragraph',
+    {
+      info: 'A component to render a paragraph of text.',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of the Paragraph.',
+          sections: [
+            {
+              title: 'Default',
+              subtitle: 'Paragraph - unstyled.',
+              sectionFn: () => (<Paragraph>Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner.</Paragraph>),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            },
+            {
+              title: 'OutRun Blue',
+              sectionFn: () => (<Paragraph theme={Themes.Paragraph.OutRun_Blue}>Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner.</Paragraph>)
             }
           ]
         }
