@@ -1,0 +1,38 @@
+@import "@g33kchris/fusionkit-css-layout";
+@import "@g33kchris/fusionkit-css-responsive";
+
+.root {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    composes: gridWrapper from '@g33kchris/fusionkit-css-layout';
+    width: 100%;
+}
+
+.content {
+    @media (--mqXl) {
+        lost-offset: 7/12;
+        lost-masonry-column: 5/12;
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+    }
+
+    @media (--mqDsktp) {
+        lost-offset: 6/12;
+        lost-masonry-column: 6/12;
+    }
+
+    @media (--mqTblt) {
+        lost-masonry-column: 12/12;
+    }
+
+    @media (--mqPhblt) {
+        lost-column: 12/12;
+    }
+
+    @media(--mqSmtPn) {
+        lost-column: 12/12;
+    }
+}

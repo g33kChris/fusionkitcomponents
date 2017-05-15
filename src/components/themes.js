@@ -9,6 +9,7 @@ import SubHeader_Themes from './_atoms/SubHeader/themes';
 import ContentBlock_Themes from './_molecules/ContentBlock/themes';
 import Button_Themes from './_atoms/Button/themes';
 import NavButtons_Themes from './_molecules/NavButtons/themes';
+import Hero_Themes from './_organisms/Hero/themes';
 
 export default {
     LinkButton: LinkButton_Themes,
@@ -21,5 +22,6 @@ export default {
     SubHeader: SubHeader_Themes,
     ContentBlock: ContentBlock_Themes,
     Button: Button_Themes,
-    NavButtons: NavButtons_Themes
+    NavButtons: NavButtons_Themes,
+    Hero: Hero_Themes
 };

@@ -2,3 +2,4 @@ export { default as CreeperRibbonLeft } from './CreeperRibbonLeft/CreeperRibbonL
 export { default as CreeperRibbonRight } from './CreeperRibbonRight/CreeperRibbonRight';
 export { default as LinkyList } from './LinkyList/LinkyList';
 export { default as NavButtons } from './NavButtons/NavButtons';
+export { default as ContentBlock } from './ContentBlock/ContentBlock';

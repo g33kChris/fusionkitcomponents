@@ -12,6 +12,7 @@ export { default as ContentBlock } from './_molecules/ContentBlock/ContentBlock'
 export { default as NavButtons } from './_molecules/NavButtons/NavButtons';
 
 export { default as GlobalRibbon } from './_organisms/GlobalRibbon/GlobalRibbon';
+export { default as Hero } from './_organisms/Hero/Hero';
 
 export { default as TimeCircuits } from './_special/TimeCircuits/TimeCircuits';
 
