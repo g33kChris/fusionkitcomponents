@@ -1,6 +1,13 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
-import { LinkButton, LivingLinkButton, Image, Paragraph, SubHeader } from '../../src/components';
+import {
+  LinkButton,
+  LivingLinkButton,
+  Image,
+  Paragraph,
+  SubHeader,
+  Button
+ } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
 import logoImage from '../../assets/g33k3rylogo2016_global.svg';
@@ -145,6 +152,35 @@ storiesOf('Atoms', module)
             {
               title: 'OutRun Blue',
               sectionFn: () => (<SubHeader theme={Themes.SubHeader.OutRun_Blue}>Bacon ipsum dolor amet drumstick leberkas frankfurter.</SubHeader>)
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'Button',
+    {
+      info: 'A component to render a Button.',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of the Button.',
+          sections: [
+            {
+              title: 'Default',
+              subtitle: 'Button - unstyled.',
+              sectionFn: () => (<Button action={() => alert('You clicked the Button!')}>Prev</Button>),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            },
+            {
+              title: 'OutRun Blue',
+              sectionFn: () => (<Button action={() => alert('You clicked the Button!')} theme={Themes.Button.OutRun_Blue}>Prev</Button>),
             }
           ]
         }

@@ -3,6 +3,7 @@ export { default as LivingLinkButton } from './_atoms/LivingLinkButton/LivingLin
 export { default as Image } from './_atoms/Image/Image';
 export { default as Paragraph } from './_atoms/Paragraph/Paragraph';
 export { default as SubHeader } from './_atoms/SubHeader/SubHeader';
+export { default as Button } from './_atoms/Button/Button';
 
 export { default as LinkyList } from './_molecules/LinkyList/LinkyList';
 export { default as CreeperRibbonRight } from './_molecules/CreeperRibbonRight/CreeperRibbonRight';
