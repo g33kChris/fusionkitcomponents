@@ -1,0 +1,21 @@
+.root {
+    composes: clearfix from '@g33kchris/fusionkit-css-utilities';
+    clear: both;
+    width: 100%;    
+}
+
+.buttonWrapper {}
+
+.left {
+    composes: buttonWrapper;
+    float: left;
+}
+
+.right {
+    composes: buttonWrapper;
+    float: right;
+}
+
+.button {
+    font-size: 1.5rem;
+}

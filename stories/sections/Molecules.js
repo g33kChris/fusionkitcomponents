@@ -5,7 +5,8 @@ import {
     LinkyList,
     CreeperRibbonRight,
     CreeperRibbonLeft,
-    ContentBlock
+    ContentBlock,
+    NavButtons
  } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
@@ -159,6 +160,46 @@ const Molecules = storiesOf('Molecules', module)
                                   cta="Read more"
                                   href="#"
                                   theme={Themes.ContentBlock.OutRun_Blue}
+                                />)
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'NavButtons',
+    {
+      info: 'A pair of Buttons to be used to Navigating previous and next.',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of NavButtons.',
+          sections: [
+            {
+              title: 'Default',
+              subtitle: 'NavButtons - unstyled.',
+              sectionFn: () => (<NavButtons 
+                                  prevAction={() => alert('You Clicked Previous!')}
+                                  prevLabel="Prev" 
+                                  nextAction={() => alert('You Clicked Next')}
+                                  nextLabel="Next"
+                                />),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            },
+            {
+              title: 'MonoChromon',
+              sectionFn: () => (<NavButtons 
+                                  prevAction={() => alert('You Clicked Previous!')}
+                                  prevLabel="Prev" 
+                                  nextAction={() => alert('You Clicked Next!')}
+                                  nextLabel="Next"
+                                  theme={Themes.NavButtons.MonoChromon}
                                 />)
             }
           ]

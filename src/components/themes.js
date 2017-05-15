@@ -8,6 +8,7 @@ import Paragraph_Themes from './_atoms/Paragraph/themes';
 import SubHeader_Themes from './_atoms/SubHeader/themes';
 import ContentBlock_Themes from './_molecules/ContentBlock/themes';
 import Button_Themes from './_atoms/Button/themes';
+import NavButtons_Themes from './_molecules/NavButtons/themes';
 
 export default {
     LinkButton: LinkButton_Themes,
@@ -19,5 +20,6 @@ export default {
     Paragraph: Paragraph_Themes,
     SubHeader: SubHeader_Themes,
     ContentBlock: ContentBlock_Themes,
-    Button: Button_Themes
+    Button: Button_Themes,
+    NavButtons: NavButtons_Themes
 };

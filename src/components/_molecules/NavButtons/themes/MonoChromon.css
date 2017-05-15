@@ -1,0 +1,12 @@
+@import "@g33kchris/fusionkit-css-colours";
+
+.button {
+    transition: color 0.2s ease-in, background-color 0.2s ease-in;
+    background-color: var(--fskt_charcoal);
+    color: var(--fskt_white);
+
+    &:hover {
+        background-color: var(--fskt_white);
+        color: var(--fskt_charcoal);
+    }
+}
