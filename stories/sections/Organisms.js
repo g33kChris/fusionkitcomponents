@@ -1,9 +1,11 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
+import { G33k3ryLogo } from '../../src/components';
 import { GlobalRibbon, Hero } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
 import logoImage from '../../assets/g33k3rylogo2016_global.svg';
+import bladeRunner2049 from '../../assets/bladerunner2049.png';
 
 const demoLinks = [
   { href: '#', text: 'Games' },
@@ -12,6 +14,13 @@ const demoLinks = [
   { href: '#', text: 'Comics' },
   { href: '#', text: 'Release Blog' }
 ];
+
+const demoNavigation = {
+  prevAction: () => alert('You Clicked Previous!'),
+  prevLabel: "Prev",
+  nextAction: () => alert('You Clicked Next'),
+  nextLabel: "Next"
+};
 
 const demoContentBlock = {
     header: "Bacon ipsum dolor amet drumstick leberkas frankfurter",
@@ -62,7 +71,14 @@ storiesOf('Organisms', module)
             {
               title: 'Default',
               subtitle: 'Hero - unstyled.',
-              sectionFn: () => (<Hero content={demoContentBlock} />),
+              sectionFn: () => (<Hero 
+                  backgroundImage="https://placeholdit.imgix.net/~text?txtsize=33&txt=1920%C3%971080&w=1920&h=1080"
+                  content={demoContentBlock}
+                  navigation={demoNavigation}
+                >
+                  <G33k3ryLogo key="left" />
+                  <p key="right">Content goes here</p>
+                </Hero>),
               options: {
                 showSource: true,
                 allowSourceToggling: true,

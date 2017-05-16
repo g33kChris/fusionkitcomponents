@@ -1,6 +1,8 @@
 import React from 'react';
 import styleMixer from "@g33kchris/fusionkit-js-stylemixer";
-import { ContentBlock } from '../../_molecules';
+import getChildByKey from '../../helpers/getChildByKey';
+import styleMappers from './styleMappers';
+import { ContentBlock, NavButtons, CreeperRibbonLeft } from '../../_molecules';
 import baseStyles from './Hero.css';
 
 {/*<div className={bg} style={{backgroundImage: `url(${heroImage})`}}>
@@ -15,21 +17,35 @@ import baseStyles from './Hero.css';
         </div>
     </div>*/}
 
+
+{/*<Image imageSrc={logo} theme={StyleMappers.GlobalRibbon.toImage(styles)} key="left" />
+                    <LinkyList itemDto={linkDto} items={links} key="right" theme={StyleMappers.GlobalRibbon.toLinkyList(styles)} />*/}
+
 const Hero = ({
-    logo,
+    children,
+    backgroundImage,
     content,
     navigation,    
-    theme 
+    theme
 }) => {
     const styles = styleMixer(baseStyles, theme);
     return (
-        <div className={styles.rootWrapper}>
+        <div className={styles.rootWrapper} style={{backgroundImage: `url(${backgroundImage})`}}>
             <div className={styles.root}>
+                { children && 
+                    <CreeperRibbonLeft theme={styleMappers.toCreeperRibbonLeft(styles)}>
+                        { getChildByKey(children, 'left') }
+                        { getChildByKey(children, 'right') }
+                    </CreeperRibbonLeft> 
+                }
                 <div className={styles.wrapper}>
+                    { content && 
                     <div className={styles.content}>
                         <ContentBlock {...content} />
-                    </div>
+                    </div> 
+                }
                 </div>
+                { navigation && <NavButtons {...navigation}/> }
             </div>
         </div>
     );

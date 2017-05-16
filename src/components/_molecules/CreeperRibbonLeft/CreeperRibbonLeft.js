@@ -1,22 +1,17 @@
 import React from 'react';
 import styleMixer from '@g33kchris/fusionkit-js-stylemixer';
+import getChildByKey from '../../helpers/getChildByKey';
 import baseStyles from './CreeperRibbonLeft.css';
-
- const getComponent = (children, key) => {
-    return children.filter( (comp) => {
-            return comp.key === key;
-    });
-};
 
 const CreeperRibbonLeft = ({ children, theme }) => {
     const styles = styleMixer(baseStyles, theme);
     return (<div className={styles.root}>
                 <div className={styles.wrapper}>
                     <div className={styles.left}>
-                        { getComponent(children, 'left') }
+                        { getChildByKey(children, 'left') }
                     </div>
                     <div className={styles.right}>
-                        { getComponent(children, 'right') }
+                        { getChildByKey(children, 'right') }
                     </div>
                 </div>
             </div>);
