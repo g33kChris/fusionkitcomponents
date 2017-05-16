@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 import { G33k3ryLogo } from '../../src/components';
+import { ServiceLinks } from '../../src/components';
 import { GlobalRibbon, Hero } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
@@ -32,6 +33,15 @@ const demoContentBlock = {
     body: "Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner.",
     cta: "Read more",
     href: "#"
+};
+
+const serviceData = {
+  twitter: { href:"#", label: "twitter" },
+  rss: { href:"#", label: "rss" },
+  tumblr: { href:"#", label: "tumblr" },
+  youtube: { href:"#", label: "youtube" },
+  facebook: { href:"#", label: "facebook" },
+  twitch: { href:"#", label: "twitch" }
 };
 
 storiesOf('Organisms', module)
@@ -102,7 +112,7 @@ storiesOf('Organisms', module)
                   navigation={demoOutRunNavigation}
                 >
                   <G33k3ryLogo key="left" />
-                  <p key="right">Content goes here</p>
+                  <ServiceLinks services={serviceData} theme={Themes.ServiceLinks.OutRun_Pink} key="right" />
                 </Hero>)
             }
           ]

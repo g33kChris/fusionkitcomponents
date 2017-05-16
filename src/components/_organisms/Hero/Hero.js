@@ -34,8 +34,8 @@ const Hero = ({
             <div className={styles.root}>
                 { children && 
                     <CreeperRibbonLeft theme={styleMappers.toCreeperRibbonLeft(styles)}>
-                        { getChildByKey(children, 'left') }
-                        { getChildByKey(children, 'right') }
+                        <div className={styles.childLeftWrapper} key="left">{ getChildByKey(children, 'left') }</div>
+                        <div className={styles.childRightWrapper} key="right">{ getChildByKey(children, 'right') }</div>
                     </CreeperRibbonLeft> 
                 }
                 <div className={styles.wrapper}>

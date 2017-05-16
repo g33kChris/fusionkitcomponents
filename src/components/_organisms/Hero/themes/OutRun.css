@@ -54,6 +54,44 @@
     background-color: color(var(--outrun_blue)  alpha(-30%));
 }
 
+.ribbonLeft {
+    @apply --grid_phblt_3;
+
+    @media (--tpHeroPhabletMax) {
+        lost-masonry-column: 12/12;   
+    }
+}
+
+.ribbonRight {
+    @apply --grid_phblt_3;
+
+    @media (--tpHeroTabletMin) {
+        text-align: right;
+    }
+
+    @media (--tpHeroPhabletMax) {
+        lost-masonry-column: 12/12;   
+    }
+
+    @media (--mqTblt_below) {
+        display: block;
+    }
+}
+
+.childRightWrapper {
+
+    @media (--tpHeroTabletMin) {
+        max-width: 18rem;
+        display: inline-block;
+    }
+
+    @media (--tpHeroPhabletMax) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .contentBlock {
     background-color: transparent;
 }
@@ -119,13 +157,19 @@
     composes: icon-chevron-right from "@g33kchris/fusionkit-css-typography";
 }
 
+.links {
+    display: inline-block;
+    margin: 0;
+    @media (--tpHeroPhabletMax) {
+        max-width: none;
+    }
+}
+
 /*.links {
     max-width: 18rem;
     display: inline-block;
 
-    @media (--tpHeroPhabletMax) {
-        max-width: none;
-    }
+    
 }
 
 .title {
