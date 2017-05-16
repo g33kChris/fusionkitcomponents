@@ -7,7 +7,7 @@
     "@g33kchris/fusionkit-css-baseline": "0.0.3",
     "@g33kchris/fusionkit-css-colours": "0.0.3",
     "@g33kchris/fusionkit-css-foundations": "0.0.2",
-    "@g33kchris/fusionkit-css-layout": "0.0.3",
+    "@g33kchris/fusionkit-css-layout": "^0.0.5",
     "@g33kchris/fusionkit-css-responsive": "0.0.1",
     "@g33kchris/fusionkit-css-typography": "0.0.3",
     "@g33kchris/fusionkit-css-utilities": "0.0.2",
