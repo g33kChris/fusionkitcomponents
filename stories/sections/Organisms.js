@@ -71,7 +71,8 @@ storiesOf('Organisms', module)
             {
               title: 'Default',
               subtitle: 'Hero - unstyled.',
-              sectionFn: () => (<Hero 
+              sectionFn: () => (
+              <Hero 
                   backgroundImage="https://placeholdit.imgix.net/~text?txtsize=33&txt=1920%C3%971080&w=1920&h=1080"
                   content={demoContentBlock}
                   navigation={demoNavigation}
@@ -88,7 +89,16 @@ storiesOf('Organisms', module)
             },
             {
               title: 'OutRun',
-              sectionFn: () => (<Hero theme={Themes.Hero.Outrun} />)
+              sectionFn: () => (
+              <Hero 
+                  theme={Themes.Hero.OutRun}
+                  backgroundImage={bladeRunner2049}
+                  content={demoContentBlock}
+                  navigation={demoNavigation}
+                >
+                  <G33k3ryLogo key="left" />
+                  <p key="right">Content goes here</p>
+                </Hero>)
             }
           ]
         }

@@ -1,0 +1,184 @@
+@import "@g33kchris/fusionkit-css-colours";
+@import "@g33kchris/fusionkit-css-layout";
+
+@custom-media --tpHeroDesktopMin (width >= 50em);
+@custom-media --tpHeroTabletMax (width <= 49.94em);
+@custom-media --tpHeroTabletMin (width >= 31.5em);
+@custom-media --tpHeroPhabletMax (width <= 31.44em);
+@custom-media --mqHeroTablet (width <= 49.94em) and (width >= 31.5em);
+@custom-media --mqHeroPhablet (width <= 31.44em) and (width <= 31.44em);
+
+:root {
+    --darkBaseColor: var(--fskt_charcoal)
+};
+
+.root {
+    display: flex;
+    flex-direction: column;
+    
+    @media (--mqXl) {
+        background: linear-gradient( 90deg, color(var(--darkBaseColor) alpha(10%)) 0%, color(var(--darkBaseColor) alpha(75%)) 58%, color(var(--darkBaseColor) alpha(80%)));
+    }
+
+    @media (--mqDsktp) {
+        background: linear-gradient( 90deg, color(var(--darkBaseColor) alpha(10%)) 0%, color(var(--darkBaseColor) alpha(75%)) 58%, color(var(--darkBaseColor) alpha(80%)));
+    }
+
+    @media (--mqTblt) {
+        background: linear-gradient( 20deg, color(var(--darkBaseColor) alpha(80%)) 0%, color(var(--darkBaseColor) alpha(75%)) 58%, color(var(--darkBaseColor) alpha(10%)));
+    }
+
+    @media (--mqPhblt) {
+        background: linear-gradient( 20deg, color(var(--darkBaseColor) alpha(80%)) 0%, color(var(--darkBaseColor) alpha(75%)) 58%, color(var(--darkBaseColor) alpha(60%)));
+    }
+
+    @media(--mqSmtPn) {
+        background: linear-gradient( 20deg, color(var(--darkBaseColor) alpha(80%)) 0%, color(var(--darkBaseColor) alpha(75%)) 58%, color(var(--darkBaseColor) alpha(60%)));
+    }
+}
+
+.rootWrapper {
+    background-position-x: center;
+    background-size: cover;
+
+    @media (--tpHeroDesktopMin) {
+        background-position-y: top;
+    }
+
+    @media (--tpHeroTabletMax) {
+        background-position-y: center;
+    }
+}
+
+.ribbon {
+    background-color: color(var(--outrun_blue)  alpha(-30%));
+}
+
+.contentBlock {
+    background-color: transparent;
+}
+
+.contentBlockHeader {
+    text-transform: uppercase;
+    color: var(--fskt_white);
+    @media (--mqDsktp_above) {
+        text-align: right;
+    }
+}
+
+.contentBlockText {
+    color: var(--fskt_white);
+    @media (--mqDsktp_above) {
+        text-align: right;
+    }    
+}
+
+.contentBlockCta {
+    @media (--mqDsktp_above) {
+        max-width: 40%;
+        float: right;
+    }
+    transition: background-color 0.2s ease-in;
+    color: var(--fskt_white);
+
+    &:hover {
+        background-color: color(var(--outrun_blue) blackness(20%));
+    }
+
+    &:active {
+        background-color: color(var(--outrun_blue) blackness(30%));
+    }
+}
+
+.navButton {
+    transition: background-color 0.2s ease-in;
+    background-color: transparent;
+    color: var(--fskt_white);
+    &:hover {
+        background-color: color(var(--outrun_blue));
+    }
+
+    &:active {
+        background-color: color(var(--outrun_blue) blackness(30%));
+    }
+}
+
+/*.links {
+    max-width: 18rem;
+    display: inline-block;
+
+    @media (--tpHeroPhabletMax) {
+        max-width: none;
+    }
+}
+
+.title {
+    text-align: right;
+
+    @media (--mqTblt) {
+        text-align: left;
+    }
+
+    @media (--mqPhblt) {
+        text-align: left;
+    }
+
+    @media(--mqSmtPn) {
+        text-align: left;
+    }
+}*/
+
+/* ServiceLinks Molecule modifiers */
+/*.serviceLinks {
+    @media (--tpHeroPhabletMax) {
+        text-align: center;
+    }
+}*/
+
+/* HeaderRibbon Molecule modifiers */
+/*.headerRoot {
+    background-color: color(var(--primaryColor) alpha(-20%));
+}*/
+
+/* Paragraph Atom modifiers */
+/*.paragraph {
+    text-align: right;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+
+    @media (--mqTblt) {
+        text-align: left;
+    }
+
+    @media (--mqPhblt) {
+        text-align: left;
+    }
+
+    @media(--mqSmtPn) {
+        text-align: left;
+    }
+}*/
+
+/* Subheader Atom modifiers */
+/*.subheader {
+    font-size: 3rem;
+    text-transform: uppercase;
+}*/
+
+/* Button Atom modifiers */
+/*.button {
+    @media (--mqXl) {
+        max-width: 40%;
+        float: right;
+    }
+
+    @media (--mqDsktp) {
+        max-width: 40%;
+        float: right;
+    }
+
+    @media (--mqTblt) {
+        max-width: 40%;
+        float: left;
+    }
+}*/

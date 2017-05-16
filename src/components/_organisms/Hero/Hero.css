@@ -42,4 +42,9 @@
         margin-top: 8rem;
         margin-bottom: 8rem;
     }
+
+    @media (--mqXl_below) {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
 }

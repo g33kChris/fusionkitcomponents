@@ -3,7 +3,7 @@
 @import "@g33kchris/fusionkit-css-colours";
 
 :root {
-    --logoPixelColor: var(--fskt_charcoal);
+    --logoPixelColor: var(--fskt_white);
     --logoShadowColor: var(--fskt_charcoal);
     --logoLetteringStroke: var(--fskt_charcoal);
     --logoLetteringColor: var(--fskt_white);

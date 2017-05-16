@@ -41,11 +41,11 @@ const Hero = ({
                 <div className={styles.wrapper}>
                     { content && 
                     <div className={styles.content}>
-                        <ContentBlock {...content} />
+                        <ContentBlock {...content} theme={styleMappers.toContentBlock(styles)} />
                     </div> 
                 }
                 </div>
-                { navigation && <NavButtons {...navigation}/> }
+                { navigation && <NavButtons {...navigation} theme={styleMappers.toNavButtons(styles)}/> }
             </div>
         </div>
     );
