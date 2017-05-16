@@ -1,0 +1,22 @@
+@import "@g33kchris/fusionkit-css-colours";
+
+:root {
+    --baseColor: var(--outrun_blue)
+};
+
+.button {
+    background-color: var(--baseColor);
+    color: var(--fskt_white);
+
+    &:hover {
+        background-color: color(var(--baseColor) blackness(20%));
+    }
+
+    &:active {
+        background-color: color(var(--baseColor) blackness(40%));
+    }
+}
+
+.twitter, .tumblr, .facebook, .twitch, .youtube, .rss {
+    composes: button;
+}

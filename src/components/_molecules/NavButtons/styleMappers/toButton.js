@@ -1,5 +1,12 @@
-const toButton = parentStyles => ({
-    root: parentStyles.button
+const left = parentStyles => ({
+    root: parentStyles.buttonLeft
 });
 
-export default toButton;
+const right = parentStyles => ({
+    root: parentStyles.buttonRight
+});
+
+export default {
+    left,
+    right
+};

@@ -4,8 +4,8 @@
 
 :root {
     --logoPixelColor: var(--fskt_white);
-    --logoShadowColor: var(--fskt_charcoal);
-    --logoLetteringStroke: var(--fskt_charcoal);
+    --logoShadowColor: var(--fskt_black);
+    --logoLetteringStroke: var(--fskt_black);
     --logoLetteringColor: var(--fskt_white);
 }
 

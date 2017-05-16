@@ -94,6 +94,12 @@
     transition: background-color 0.2s ease-in;
     background-color: transparent;
     color: var(--fskt_white);
+    padding: 0;
+    &:before {
+        padding: 1rem;
+        display: inline-block;
+    }
+
     &:hover {
         background-color: color(var(--outrun_blue));
     }
@@ -101,6 +107,16 @@
     &:active {
         background-color: color(var(--outrun_blue) blackness(30%));
     }
+}
+
+.navButtonLeft {
+    composes: navButton;
+    composes: icon-chevron-left from "@g33kchris/fusionkit-css-typography";
+}
+
+.navButtonRight {
+    composes: navButton;
+    composes: icon-chevron-right from "@g33kchris/fusionkit-css-typography";
 }
 
 /*.links {

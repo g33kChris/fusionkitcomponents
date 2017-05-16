@@ -10,6 +10,7 @@ import ContentBlock_Themes from './_molecules/ContentBlock/themes';
 import Button_Themes from './_atoms/Button/themes';
 import NavButtons_Themes from './_molecules/NavButtons/themes';
 import Hero_Themes from './_organisms/Hero/themes';
+import ServiceLinks_Themes from './_molecules/ServiceLinks/themes';
 
 export default {
     LinkButton: LinkButton_Themes,
@@ -23,5 +24,6 @@ export default {
     ContentBlock: ContentBlock_Themes,
     Button: Button_Themes,
     NavButtons: NavButtons_Themes,
-    Hero: Hero_Themes
+    Hero: Hero_Themes,
+    ServiceLinks: ServiceLinks_Themes
 };

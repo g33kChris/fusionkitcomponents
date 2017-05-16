@@ -22,6 +22,11 @@ const demoNavigation = {
   nextLabel: "Next"
 };
 
+const demoOutRunNavigation = {
+  prevAction: () => alert('You Clicked Previous!'),
+  nextAction: () => alert('You Clicked Next')
+};
+
 const demoContentBlock = {
     header: "Bacon ipsum dolor amet drumstick leberkas frankfurter",
     body: "Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner.",
@@ -94,7 +99,7 @@ storiesOf('Organisms', module)
                   theme={Themes.Hero.OutRun}
                   backgroundImage={bladeRunner2049}
                   content={demoContentBlock}
-                  navigation={demoNavigation}
+                  navigation={demoOutRunNavigation}
                 >
                   <G33k3ryLogo key="left" />
                   <p key="right">Content goes here</p>

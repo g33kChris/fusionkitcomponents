@@ -6,7 +6,8 @@ import {
     CreeperRibbonRight,
     CreeperRibbonLeft,
     ContentBlock,
-    NavButtons
+    NavButtons,
+    ServiceLinks
  } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
@@ -19,6 +20,15 @@ const linkData = [
   { href:"#", text: 'This is a test link' },
   { href:"#", text: 'This is a test link' }
 ];
+
+const ServiceData = {
+  twitter: { href:"#", label: "twitter" },
+  rss: { href:"#", label: "rss" },
+  tumblr: { href:"#", label: "tumblr" },
+  youtube: { href:"#", label: "youtube" },
+  facebook: { href:"#", label: "facebook" },
+  twitch: { href:"#", label: "twitch" }
+};
 
 const LinkyList_ListButton = 
   new ChildDto (
@@ -167,6 +177,7 @@ const Molecules = storiesOf('Molecules', module)
       ]
     }
   )
+  
   .addWithChapters(
     'NavButtons',
     {
@@ -201,6 +212,35 @@ const Molecules = storiesOf('Molecules', module)
                                   nextLabel="Next"
                                   theme={Themes.NavButtons.MonoChromon}
                                 />)
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'ServiceLinks',
+    {
+      info: 'A collection of links to other services.',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of ServiceLinks.',
+          sections: [
+            {
+              title: 'Default',
+              subtitle: 'ServiceLinks - unstyled.',
+              sectionFn: () => (<ServiceLinks services={ServiceData} />),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            },
+            {
+              title: 'OutRun - blue',
+              sectionFn: () => (<ServiceLinks services={ServiceData} theme={Themes.ServiceLinks.OutRun_Blue} />)
             }
           ]
         }

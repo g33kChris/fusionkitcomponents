@@ -1,5 +1,6 @@
 const toContentBlock = parentStyles => ({
-    button: parentStyles.navButton
+    buttonLeft: parentStyles.navButtonLeft,
+    buttonRight: parentStyles.navButtonRight
 });
 
 export default toContentBlock;

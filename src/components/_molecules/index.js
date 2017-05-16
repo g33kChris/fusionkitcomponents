@@ -3,3 +3,4 @@ export { default as CreeperRibbonRight } from './CreeperRibbonRight/CreeperRibbo
 export { default as LinkyList } from './LinkyList/LinkyList';
 export { default as NavButtons } from './NavButtons/NavButtons';
 export { default as ContentBlock } from './ContentBlock/ContentBlock';
+export { default as ServiceLinks } from './ServiceLinks/ServiceLinks';

@@ -10,3 +10,7 @@
         color: var(--fskt_charcoal);
     }
 }
+
+.buttonLeft, .buttonRight {
+    composes: button;
+}

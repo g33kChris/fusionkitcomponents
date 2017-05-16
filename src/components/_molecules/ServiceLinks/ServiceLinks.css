@@ -1,0 +1,56 @@
+@import "@g33kchris/fusionkit-css-responsive";
+
+.root {
+    list-style: none;
+    text-align: right;
+}
+
+.item {
+    display: inline-block;
+}
+
+.hiddenLabel {
+    display: none;
+}
+
+.icon {
+    padding: 1.2rem;
+    &:before {
+        font-size: 2.2rem;
+    }
+
+    @media(--mqSmtPn) {
+        padding: 0.8rem;
+    }
+}
+
+/*LinkButton Atom Modifiers*/
+.twitter {
+    composes: icon;
+    composes: icon-twitter from "@g33kchris/fusionkit-css-typography";
+}
+
+.youtube {
+    composes: icon;
+    composes: icon-youtube from "@g33kchris/fusionkit-css-typography";
+}
+
+.twitch {
+    composes: icon;
+    composes: icon-twitch from "@g33kchris/fusionkit-css-typography";
+}
+
+.rss {
+    composes: icon;
+    composes: icon-rss from "@g33kchris/fusionkit-css-typography";
+}
+
+.facebook {
+    composes: icon;
+    composes: icon-facebook from "@g33kchris/fusionkit-css-typography";
+}
+
+.tumblr {
+    composes: icon;
+    composes: icon-tumblr from "@g33kchris/fusionkit-css-typography";
+}
