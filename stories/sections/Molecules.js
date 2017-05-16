@@ -239,8 +239,8 @@ const Molecules = storiesOf('Molecules', module)
               }
             },
             {
-              title: 'OutRun - blue',
-              sectionFn: () => (<ServiceLinks services={ServiceData} theme={Themes.ServiceLinks.OutRun_Blue} />)
+              title: 'OutRun - Pink',
+              sectionFn: () => (<ServiceLinks services={ServiceData} theme={Themes.ServiceLinks.OutRun_Pink} />)
             }
           ]
         }

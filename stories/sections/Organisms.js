@@ -92,7 +92,7 @@ storiesOf('Organisms', module)
                   content={demoContentBlock}
                   navigation={demoNavigation}
                 >
-                  <G33k3ryLogo key="left" />
+                  <p key="left">Content goes here</p>
                   <p key="right">Content goes here</p>
                 </Hero>),
               options: {
@@ -112,7 +112,7 @@ storiesOf('Organisms', module)
                   navigation={demoOutRunNavigation}
                 >
                   <G33k3ryLogo key="left" />
-                  <ServiceLinks services={serviceData} theme={Themes.ServiceLinks.OutRun_Pink} key="right" />
+                  <ServiceLinks services={serviceData} key="right" />
                 </Hero>)
             }
           ]
