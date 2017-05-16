@@ -6,7 +6,8 @@ import {
   Image,
   Paragraph,
   SubHeader,
-  Button
+  Button,
+  G33k3ryLogo
  } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
@@ -181,6 +182,31 @@ storiesOf('Atoms', module)
             {
               title: 'OutRun Blue',
               sectionFn: () => (<Button action={() => alert('You clicked the Button!')} theme={Themes.Button.OutRun_Blue}>Prev</Button>),
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'G33k3ryLogo',
+    {
+      info: 'The G33k3ryLogo svg in component form.',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of the G33k3ryLogo.',
+          sections: [
+            {
+              title: 'Default',
+              subtitle: 'G33k3ryLogo - unstyled.',
+              sectionFn: () => (<G33k3ryLogo />),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
             }
           ]
         }
