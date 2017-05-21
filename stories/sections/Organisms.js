@@ -2,11 +2,13 @@ import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 import { G33k3ryLogo } from '../../src/components';
 import { ServiceLinks } from '../../src/components';
-import { GlobalRibbon, Hero } from '../../src/components';
+import { GlobalRibbon, HeaderRibbon, Hero } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
 import logoImage from '../../assets/g33k3rylogo2016_global.svg';
 import bladeRunner2049 from '../../assets/bladerunner2049.png';
+import ghostInTheShell from '../../assets/ghostintheshell.jpg';
+import bttf2 from '../../assets/bttf2.jpg';
 
 const demoLinks = [
   { href: '#', text: 'Games' },
@@ -75,6 +77,43 @@ storiesOf('Organisms', module)
     }
   )
   .addWithChapters(
+    'HeaderRibbon',
+    {
+      info: 'A Ribbon component used as a header for  site.',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of the HeaderRibbon',
+          sections: [
+            {
+              title: 'Default',
+              subtitle: 'HeaderRibbon - unstyled.',
+              sectionFn: () => (
+                <HeaderRibbon services={serviceData}>
+                  <G33k3ryLogo />
+                </HeaderRibbon>
+              
+              ),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            },
+            {
+              title: 'OutRun Blue',
+              sectionFn: () => (
+                <HeaderRibbon services={serviceData} theme={Themes.HeaderRibbon.OutRun}>
+                  <G33k3ryLogo />
+                </HeaderRibbon>)
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
     'Hero',
     {
       info: 'A section of hero content',
@@ -92,8 +131,7 @@ storiesOf('Organisms', module)
                   content={demoContentBlock}
                   navigation={demoNavigation}
                 >
-                  <p key="left">Content goes here</p>
-                  <p key="right">Content goes here</p>
+                  <p>Top ribbon starts heres</p>
                 </Hero>),
               options: {
                 showSource: true,
@@ -103,7 +141,31 @@ storiesOf('Organisms', module)
               }
             },
             {
-              title: 'OutRun',
+              title: 'With a Header Ribbon',
+              sectionFn: () => (
+              <Hero
+                  backgroundImage="https://placeholdit.imgix.net/~text?txtsize=33&txt=1920%C3%971080&w=1920&h=1080"
+                  content={demoContentBlock}
+                  navigation={demoNavigation}
+                >
+                  <HeaderRibbon services={serviceData}>
+                    <G33k3ryLogo />
+                  </HeaderRibbon>
+                </Hero>)
+            },
+            {
+              title: 'With a Global Ribbon',
+              sectionFn: () => (
+              <Hero
+                  backgroundImage="https://placeholdit.imgix.net/~text?txtsize=33&txt=1920%C3%971080&w=1920&h=1080"
+                  content={demoContentBlock}
+                  navigation={demoNavigation}
+                >
+                  <GlobalRibbon logo={logoImage} links={demoLinks} />
+                </Hero>)
+            },
+            {
+              title: 'OutRun (HeaderRibbon)',
               sectionFn: () => (
               <Hero 
                   theme={Themes.Hero.OutRun}
@@ -111,8 +173,33 @@ storiesOf('Organisms', module)
                   content={demoContentBlock}
                   navigation={demoOutRunNavigation}
                 >
-                  <G33k3ryLogo key="left" />
-                  <ServiceLinks services={serviceData} key="right" />
+                  <HeaderRibbon services={serviceData} theme={Themes.HeaderRibbon.OutRun}>
+                    <G33k3ryLogo />
+                  </HeaderRibbon>
+                </Hero>)
+            },
+            {
+              title: 'OutRun (GlobalRibbon - CandyCane)',
+              sectionFn: () => (
+              <Hero 
+                  theme={Themes.Hero.OutRun}
+                  backgroundImage={ghostInTheShell}
+                  content={demoContentBlock}
+                  navigation={demoOutRunNavigation}
+                >
+                  <GlobalRibbon logo={logoImage} links={demoLinks} theme={Themes.GlobalRibbon.OutRunCandycane} />
+                </Hero>)
+            },
+            {
+              title: 'OutRun (GlobalRibbon - OutRun Skyblue)',
+              sectionFn: () => (
+              <Hero 
+                  theme={Themes.Hero.OutRun}
+                  backgroundImage={bttf2}
+                  content={demoContentBlock}
+                  navigation={demoOutRunNavigation}
+                >
+                  <GlobalRibbon logo={logoImage} links={demoLinks} theme={Themes.GlobalRibbon.OutRunSkyBlue} />
                 </Hero>)
             }
           ]

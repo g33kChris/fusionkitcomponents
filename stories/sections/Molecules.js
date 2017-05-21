@@ -177,7 +177,6 @@ const Molecules = storiesOf('Molecules', module)
       ]
     }
   )
-  
   .addWithChapters(
     'NavButtons',
     {

@@ -32,12 +32,7 @@ const Hero = ({
     return (
         <div className={styles.rootWrapper} style={{backgroundImage: `url(${backgroundImage})`}}>
             <div className={styles.root}>
-                { children && 
-                    <CreeperRibbonLeft theme={styleMappers.toCreeperRibbonLeft(styles)}>
-                        <div className={styles.childLeftWrapper} key="left">{ getChildByKey(children, 'left') }</div>
-                        <div className={styles.childRightWrapper} key="right">{ getChildByKey(children, 'right') }</div>
-                    </CreeperRibbonLeft> 
-                }
+                { children }                   
                 <div className={styles.wrapper}>
                     { content && 
                     <div className={styles.content}>

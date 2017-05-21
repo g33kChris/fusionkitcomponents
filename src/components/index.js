@@ -14,6 +14,7 @@ export { default as NavButtons } from './_molecules/NavButtons/NavButtons';
 export { default as ServiceLinks } from './_molecules/ServiceLinks/ServiceLinks';
 
 export { default as GlobalRibbon } from './_organisms/GlobalRibbon/GlobalRibbon';
+export { default as HeaderRibbon } from './_organisms/HeaderRibbon/HeaderRibbon';
 export { default as Hero } from './_organisms/Hero/Hero';
 
 export { default as TimeCircuits } from './_special/TimeCircuits/TimeCircuits';

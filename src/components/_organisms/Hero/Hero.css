@@ -12,18 +12,6 @@
     background-size: cover;
 }
 
-.ribbon {
-    background-color: var(--fskt_charcoal);
-}
-
-.ribbonLeft {
-    @apply --grid_tblt_3;
-}
-
-.ribbonRight {
-    @apply --grid_tblt_5;
-}
-
 .wrapper {
     composes: gridWrapper from '@g33kchris/fusionkit-css-layout';
     width: 100%;

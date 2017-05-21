@@ -11,6 +11,7 @@ import Button_Themes from './_atoms/Button/themes';
 import NavButtons_Themes from './_molecules/NavButtons/themes';
 import Hero_Themes from './_organisms/Hero/themes';
 import ServiceLinks_Themes from './_molecules/ServiceLinks/themes';
+import HeaderRibbon_Themes from  './_organisms/HeaderRibbon/themes';
 
 export default {
     LinkButton: LinkButton_Themes,
@@ -25,5 +26,6 @@ export default {
     Button: Button_Themes,
     NavButtons: NavButtons_Themes,
     Hero: Hero_Themes,
-    ServiceLinks: ServiceLinks_Themes
+    ServiceLinks: ServiceLinks_Themes,
+    HeaderRibbon: HeaderRibbon_Themes
 };

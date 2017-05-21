@@ -12,7 +12,7 @@ module.exports = {
                 loader: 'file?name=fonts/[name].[ext]'
             },
             {
-                test: /\.(png)$/,
+                test: /\.(png|jpg)$/,
                 loader: 'file'
             }
         ]

@@ -5,21 +5,6 @@ import "@g33kchris/fusionkit-css-typography";
 import baseStyles from './ServiceLinks.css';
 import { LinkButton } from '../../_atoms';
 
-/*
-
-
-const atomModifiers = {
-    linkButton: {
-        twitter: { root: css.twitter },
-        youtube: { root: css.youtube },
-        tumblr: { root: css.tumblr },
-        facebook: { root: css.facebook },
-        twitch: { root: css.twitch },
-        rss: { root: css.rss }
-    }
-};
-*/
-
 const Item = ({ styles, theme, service }) => (
     <li className={styles.item}>
         <LinkButton href={service.href} theme={styleMappers.toLinkButton(theme)}> 
