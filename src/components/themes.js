@@ -12,6 +12,7 @@ import NavButtons_Themes from './_molecules/NavButtons/themes';
 import Hero_Themes from './_organisms/Hero/themes';
 import ServiceLinks_Themes from './_molecules/ServiceLinks/themes';
 import HeaderRibbon_Themes from  './_organisms/HeaderRibbon/themes';
+import NavRibbon_Themes from './_organisms/NavRibbon/themes';
 
 export default {
     LinkButton: LinkButton_Themes,
@@ -27,5 +28,6 @@ export default {
     NavButtons: NavButtons_Themes,
     Hero: Hero_Themes,
     ServiceLinks: ServiceLinks_Themes,
-    HeaderRibbon: HeaderRibbon_Themes
+    HeaderRibbon: HeaderRibbon_Themes,
+    NavRibbon: NavRibbon_Themes
 };

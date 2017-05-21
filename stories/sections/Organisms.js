@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 import { G33k3ryLogo } from '../../src/components';
 import { ServiceLinks } from '../../src/components';
-import { GlobalRibbon, HeaderRibbon, Hero } from '../../src/components';
+import { GlobalRibbon, HeaderRibbon, Hero, NavRibbon } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
 import logoImage from '../../assets/g33k3rylogo2016_global.svg';
@@ -201,6 +201,35 @@ storiesOf('Organisms', module)
                 >
                   <GlobalRibbon logo={logoImage} links={demoLinks} theme={Themes.GlobalRibbon.OutRunSkyBlue} />
                 </Hero>)
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'NavRibbon',
+    {
+      info: 'A Ribbon component used for Navigation links.',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of the NavRibbon',
+          sections: [
+            {
+              title: 'Default',
+              subtitle: 'NavRibbon - unstyled.',
+              sectionFn: () => (<NavRibbon links={demoLinks} />),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            },
+            {
+              title: 'OutRun',
+              sectionFn: () => (<NavRibbon links={demoLinks} theme={Themes.NavRibbon.OutRun} />)
             }
           ]
         }
