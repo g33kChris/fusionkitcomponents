@@ -12,6 +12,7 @@ export { default as CreeperRibbonLeft } from './_molecules/CreeperRibbonLeft/Cre
 export { default as ContentBlock } from './_molecules/ContentBlock/ContentBlock';
 export { default as NavButtons } from './_molecules/NavButtons/NavButtons';
 export { default as ServiceLinks } from './_molecules/ServiceLinks/ServiceLinks';
+export { default as BgMediaTile } from './_molecules/BgMediaTile/BgMediaTile';
 
 export { default as GlobalRibbon } from './_organisms/GlobalRibbon/GlobalRibbon';
 export { default as HeaderRibbon } from './_organisms/HeaderRibbon/HeaderRibbon';

@@ -1,0 +1,42 @@
+@import "@g33kchris/fusionkit-css-colours";
+
+.root {
+    background-color: var(--fskt_charcoal);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 1rem 2rem;
+    min-height: 6rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    color: var(--fskt_white);
+}
+
+.text {
+    color: var(--fskt_white);
+}
+
+.content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.description {
+    margin-bottom: 2rem;
+}
+
+.button {
+    color: var(--fskt_white);
+}

@@ -7,7 +7,8 @@ import {
     CreeperRibbonLeft,
     ContentBlock,
     NavButtons,
-    ServiceLinks
+    ServiceLinks,
+    BgMediaTile
  } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
@@ -36,6 +37,8 @@ const LinkyList_ListButton =
     StyleMappers.LinkyList.toLinkButton,
     PropMappers.LinkyList.toLinkButton
   );
+
+import bladeRunner2049 from '../../assets/bladerunner2049.png';
 
 const Molecules = storiesOf('Molecules', module)
   .addWithChapters(
@@ -240,6 +243,63 @@ const Molecules = storiesOf('Molecules', module)
             {
               title: 'OutRun - Pink',
               sectionFn: () => (<ServiceLinks services={ServiceData} theme={Themes.ServiceLinks.OutRun_Pink} />)
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'BgMediaTile',
+    {
+      info: 'A Media tile with a configurable tile.',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of BgMediaTile.',
+          sections: [
+            {
+              title: 'Default',
+              subtitle: 'ServiceLinks - unstyled.',
+              sectionFn: () => (
+              <BgMediaTile
+                header="Bacon ipsum dolor amet drumstick leberkas frankfurter" 
+                body="Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner."
+                date="28/04/2017 - 3:00pm"
+                cta="Read more"
+                href="#"
+              />),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            },
+            {
+              title: 'With Background Image',
+              sectionFn: () => (
+              <BgMediaTile 
+                backgroundImage={bladeRunner2049}
+                header="Bacon ipsum dolor amet drumstick leberkas frankfurter" 
+                body="Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner."
+                date="28/04/2017 - 3:00pm"
+                cta="Read more"
+                href="#"
+              />)
+            },
+            {
+              title: 'OutRun',
+              sectionFn: () => (
+              <BgMediaTile 
+                backgroundImage={bladeRunner2049}
+                header="Bacon ipsum dolor amet drumstick leberkas frankfurter" 
+                body="Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner."
+                date="28/04/2017 - 3:00pm"
+                cta="Read more"
+                href="#"
+                theme={Themes.BgMediaTile.OutRun}
+              />)
             }
           ]
         }
