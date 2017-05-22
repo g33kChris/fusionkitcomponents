@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 import { G33k3ryLogo } from '../../src/components';
 import { ServiceLinks } from '../../src/components';
-import { GlobalRibbon, HeaderRibbon, Hero, NavRibbon } from '../../src/components';
+import { GlobalRibbon, HeaderRibbon, Hero, NavRibbon, FeaturedItems } from '../../src/components';
 import { Themes, PropMappers, StyleMappers, ChildDto } from '../../src/components';
 
 import logoImage from '../../assets/g33k3rylogo2016_global.svg';
@@ -45,6 +45,58 @@ const serviceData = {
   facebook: { href:"#", label: "facebook" },
   twitch: { href:"#", label: "twitch" }
 };
+
+const featuredItemData = [
+  {
+    header: "Bacon ipsum dolor amet drumstick leberkas frankfurter",
+    body: "Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner.",
+    date: "28/04/2017 - 3:00pm",
+    cta: "Read more",
+    href: "#"
+  },
+  {
+    header: "Bacon ipsum dolor amet drumstick leberkas frankfurter",
+    body: "Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner.",
+    date: "28/04/2017 - 3:00pm",
+    cta: "Read more",
+    href: "#"
+  },
+  {
+    header: "Bacon ipsum dolor amet drumstick leberkas frankfurter",
+    body: "Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner.",
+    date: "28/04/2017 - 3:00pm",
+    cta: "Read more",
+    href: "#"
+  }
+];
+
+const outrunFeaturedItemData = [
+  {
+    header: "Bacon ipsum dolor amet drumstick leberkas frankfurter",
+    body: "Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner.",
+    date: "28/04/2017 - 3:00pm",
+    cta: "Read more",
+    href: "#",
+    backgroundImage: ghostInTheShell
+  },
+  {
+    header: "Bacon ipsum dolor amet drumstick leberkas frankfurter",
+    body: "Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner.",
+    date: "28/04/2017 - 3:00pm",
+    cta: "Read more",
+    href: "#",
+    backgroundImage: bladeRunner2049
+  },
+  {
+    header: "Bacon ipsum dolor amet drumstick leberkas frankfurter",
+    body: "Bacon ipsum dolor amet drumstick leberkas frankfurter, t-bone kevin kielbasa short ribs alcatra. Rump tri-tip sirloin alcatra drumstick, swine tail flank prosciutto ball tip ground round cow pig kevin. Pork tongue prosciutto beef ribs picanha. Cow cupim shoulder kevin doner.",
+    date: "28/04/2017 - 3:00pm",
+    cta: "Read more",
+    href: "#",
+    backgroundImage: bttf2
+  }
+];
+
 
 storiesOf('Organisms', module)
   .addWithChapters(
@@ -230,6 +282,35 @@ storiesOf('Organisms', module)
             {
               title: 'OutRun',
               sectionFn: () => (<NavRibbon links={demoLinks} theme={Themes.NavRibbon.OutRun} />)
+            }
+          ]
+        }
+      ]
+    }
+  )
+  .addWithChapters(
+    'FeaturedItems',
+    {
+      info: 'A component with a collection of featured content.',
+      chapters: [
+        {
+          title: 'Versions',
+          info: 'Example versions of the FeaturedItems',
+          sections: [
+            {
+              title: 'Default',
+              subtitle: 'FeaturedItems - unstyled.',
+              sectionFn: () => (<FeaturedItems items={featuredItemData} />),
+              options: {
+                showSource: true,
+                allowSourceToggling: true,
+                showPropTables: true,
+                allowPropTablesToggling: true,
+              }
+            },
+            {
+              title: 'OutRun',
+              sectionFn: () => (<FeaturedItems items={outrunFeaturedItemData} theme={Themes.FeaturedItems.OutRun} />),
             }
           ]
         }

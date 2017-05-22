@@ -18,6 +18,7 @@ export { default as GlobalRibbon } from './_organisms/GlobalRibbon/GlobalRibbon'
 export { default as HeaderRibbon } from './_organisms/HeaderRibbon/HeaderRibbon';
 export { default as Hero } from './_organisms/Hero/Hero';
 export { default as NavRibbon } from './_organisms/NavRibbon/NavRibbon';
+export { default as FeaturedItems } from './_organisms/FeaturedItems/FeaturedItems';
 
 export { default as TimeCircuits } from './_special/TimeCircuits/TimeCircuits';
 

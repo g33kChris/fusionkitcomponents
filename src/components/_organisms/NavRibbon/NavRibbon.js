@@ -4,7 +4,7 @@ import styleMappers from './styleMappers';
 import { LinkButton } from '../../_atoms';
 import baseStyles from './NavRibbon.css';
 
-const items =  (theme, styles, links) => {
+const items =  (styles, links) => {
     return links.map((i , index) => (
         <li className={styles.item} key={index}>
             <LinkButton href={i.href} theme={styleMappers.toLinkButton(styles)}>

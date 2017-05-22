@@ -14,6 +14,7 @@ import ServiceLinks_Themes from './_molecules/ServiceLinks/themes';
 import HeaderRibbon_Themes from  './_organisms/HeaderRibbon/themes';
 import NavRibbon_Themes from './_organisms/NavRibbon/themes';
 import BgMediaTile_Themes from './_molecules/BgMediaTile/themes';
+import FeaturedItems_Themes from './_organisms/FeaturedItems/themes';
 
 export default {
     LinkButton: LinkButton_Themes,
@@ -31,5 +32,6 @@ export default {
     ServiceLinks: ServiceLinks_Themes,
     HeaderRibbon: HeaderRibbon_Themes,
     NavRibbon: NavRibbon_Themes,
-    BgMediaTile: BgMediaTile_Themes
+    BgMediaTile: BgMediaTile_Themes,
+    FeaturedItems: FeaturedItems_Themes
 };
