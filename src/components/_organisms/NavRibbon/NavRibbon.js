@@ -21,7 +21,7 @@ const NavRibbon = ({ theme, links }) => {
         <div className={styles.root}>
             <div className={styles.wrapper}>
                 <ul className={styles.items}>
-                    { links && items(theme, styles, links) }
+                    { links && items(styles, links) }
                 </ul>
             </div>
         </div>
