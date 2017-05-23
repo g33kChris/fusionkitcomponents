@@ -1,6 +1,0 @@
-@import "@g33kchris/fusionkit-css-typography";
-
-.root {
-    font-family: var(--fskt_lato);
-    font-size: 2rem;
-}
