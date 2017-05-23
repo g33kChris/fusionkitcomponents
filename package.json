@@ -1,6 +1,6 @@
 {
   "name": "@g33kchris/fusionkit-js-components",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "FusionKit React component library.",
   "main": "dist/index.js",
   "dependencies": {
@@ -36,7 +36,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "browsersync": "browser-sync start --proxy \"http://localhost:6006\"",
-    "build-storybook": "build-storybook -c .storybook -o .out",
+    "build-storybook": "build-storybook -c .storybook -o docs",
     "dev": "concurrently --kill-others \"npm run storybook\" \"npm run browsersync\"",
     "build": "gulp",
     "prepublish": "npm run build"
