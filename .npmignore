@@ -3,4 +3,5 @@ src/
 .storybook/
 .out/
 .build/
+docs/
 gulpfile.js
